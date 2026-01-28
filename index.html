@@ -3,20 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aakash J - AI & Robotics Portfolio</title>
+  <title>Aakash Jayapaul Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
+
+<canvas id="particles"></canvas>
+
+<div class="container">
   <header class="glass header-flex">
     <div class="header-text">
-      <h1>Aakash J</h1>
+      <h1>Aakash Jayapaul</h1>
       <p class="tagline">AI/ML Engineer | Computer Vision | Edge AI</p>
       <div class="contact-info">
-        <span>📞 +91 9361959211</span> | <span>📧 aakashkarthi2004@gmail.com</span>
+        <span>📞 +91 9361959211</span> | 
+        <span>📧 aakashkarthi2004@gmail.com</span>
       </div>
     </div>
-    
+
+    <button id="themeToggle" class="theme-toggle">🌙</button>
+
     <div class="terminal-window">
       <div class="terminal-header">
         <div class="terminal-buttons">
@@ -30,145 +36,209 @@
         <div class="line"><span class="prompt">>>></span> candidate.location</div>
         <div class="line output">'Chennai, India'</div>
         <div class="line"><span class="prompt">>>></span> candidate.focus_areas</div>
-        <div class="line output">['Robotics', 'Edge_AI', 'CV']</div>
-        <div class="line"><span class="prompt">>>></span> <span class="cursor">_</span></div>
+        <div class="line output">['Robotics', 'Edge_AI', 'Computer_Vision']</div>
+        <div class="line"><span class="prompt">>>></span> <span class="cursor"></span></div>
       </div>
     </div>
   </header>
 
+  <!-- About -->
   <section class="glass section">
-    <div class="accent-line"></div>
     <h2>About Me</h2>
     <p>
-      I am an AI/ML undergraduate specializing in <strong>Computer Vision, Edge AI, and intelligent systems</strong>, 
-      currently pursuing B.Tech at Sri Ramachandra Institute.
-    </p>
-    <p>
-      My focus lies at the intersection of perception and action—developing 
-      <strong>autonomous perception systems</strong> and <strong>healthcare AI</strong> that operate 
-      efficiently on low-power hardware.
+      AI/ML undergraduate specializing in <strong>computer vision, Edge AI, and intelligent systems.</strong> Strong hands-on experience in
+building real-time deep learning applications across healthcare, autonomous perception, and accessibility. Actively pursuing
+opportunities and graduate studies in Robotics and Applied Artificial Intelligence.
     </p>
   </section>
 
-    <!-- Skills -->
-    <section class="glass section">
-      <h2>Skills</h2>
-      <div class="card-grid">
-        <div class="card">Python, Java, C/C++, JavaScript, SQL</div>
-        <div class="card">Computer Vision, Deep Learning, Reinforcement Learning</div>
-        <div class="card">YOLOv5, YOLOv8, OpenCV, MediaPipe</div>
-        <div class="card">Edge AI, TensorFlow Lite, Audio Signal Processing</div>
-        <div class="card">NLP, Time Series Forecasting, AutoTS</div>
-        <div class="card">ReactJS, REST APIs, MongoDB, Flask</div>
-        <div class="card">pandas, NumPy, openpyxl, Data Processing</div>
-        <div class="card">Git, Linux, VS Code, PyCharm, IntelliJ</div>
-      </div>
-    </section>
+  <!-- Skills -->
+  <section class="glass section">
+  <h2>Core Skills</h2>
 
-    <!-- Projects -->
-    <section class="glass section">
-      <h2>Featured Projects</h2>
-      <div class="card-grid project-grid">
+  <div class="skill-matrix">
 
-        <div class="card">
-          <h3>Underwater Object Detection & Tracking (YOLOv8)</h3>
-          <p>
-            Real-time underwater object detection and tracking using YOLOv8 and OpenCV, optimized for low-visibility
-            environments and real-time inference.
-          </p>
-        </div>
+    <div class="skill-group">
+      <h3>Computer Vision</h3>
+      <div class="skill-pill">OpenCV</div>
+      <div class="skill-pill">YOLOv5</div>
+      <div class="skill-pill">YOLOv8</div>
+      <div class="skill-pill">Image Processing</div>
+      <div class="skill-pill">Object Detection</div>
+      <div class="skill-pill">Tracking</div>
+    </div>
 
-        <div class="card">
-          <h3>Heart Attack Risk Prediction (Retinal Images)</h3>
-          <p>
-            Medical image processing system to extract retinal vessel features using histogram equalization,
-            Gaussian smoothing, and Canny edge detection for cardiovascular risk analysis.
-          </p>
-        </div>
+    <div class="skill-group">
+      <h3>Deep Learning</h3>
+      <div class="skill-pill">PyTorch</div>
+      <div class="skill-pill">TensorFlow</div>
+      <div class="skill-pill">CNNs</div>
+      <div class="skill-pill">Transfer Learning</div>
+      <div class="skill-pill">Model Optimization</div>
+    </div>
 
-        <div class="card">
-          <h3>Respiratory Sound Disease Prediction (Edge AI)</h3>
-          <p>
-            Audio-based disease classification using MFCC features and Edge AI deployment for real-time,
-            low-latency healthcare monitoring.
-          </p>
-        </div>
+    <div class="skill-group">
+      <h3>Edge AI & Deployment</h3>
+      <div class="skill-pill">TensorFlow Lite</div>
+      <div class="skill-pill">Edge AI</div>
+      <div class="skill-pill">Real-Time Inference</div>
+      <div class="skill-pill">Model Quantization</div>
+    </div>
 
-        <div class="card">
-          <h3>Sign Language to English Conversion (YOLOv5)</h3>
-          <p>
-            Real-time sign language gesture detection and translation system using deep learning for
-            accessibility-focused applications.
-          </p>
-        </div>
+    <div class="skill-group">
+      <h3>Reinforcement Learning</h3>
+      <div class="skill-pill">OpenAI Gym</div>
+      <div class="skill-pill">Policy Learning</div>
+      <div class="skill-pill">Reward Optimization</div>
+      <div class="skill-pill">Simulation</div>
+    </div>
 
-        <div class="card">
-          <h3>Reinforcement Learning–Based Control System</h3>
-          <p>
-            Developed a reinforcement learning agent in a simulated environment to learn optimal control
-            policies using reward-based learning.
-          </p>
-        </div>
+    <div class="skill-group">
+      <h3>Audio & NLP</h3>
+      <div class="skill-pill">MFCC</div>
+      <div class="skill-pill">Audio Signal Processing</div>
+      <div class="skill-pill">Sentiment Analysis</div>
+      <div class="skill-pill">Text Processing</div>
+      <div class="skill-pill">Low-Resource NLP</div>
+    </div>
 
-        <div class="card">
-          <h3>Cricket Ball Tracking System</h3>
-          <p>
-            High-speed cricket ball detection and tracking using YOLOv4 and OpenCV for sports analytics.
-          </p>
-        </div>
+    <div class="skill-group">
+      <h3>Software & Data</h3>
+      <div class="skill-pill">Python</div>
+      <div class="skill-pill">Java</div>
+      <div class="skill-pill">REST APIs</div>
+      <div class="skill-pill">MongoDB</div>
+      <div class="skill-pill">pandas</div>
+      <div class="skill-pill">NumPy</div>
+      <div class="skill-pill">Git</div>
+    </div>
 
-        <div class="card">
-          <h3>ISBN-Based Book Metadata Automation</h3>
-          <p>
-            Python GUI tool to enrich Excel files using ISBN by integrating Google Books and Open Library APIs
-            for automated metadata retrieval.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Electric Car Popularity Forecasting</h3>
-          <p>
-            Time-series forecasting using AutoTS and Google Trends data to predict electric vehicle popularity trends.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Flipkart & Amazon Review Analysis (NLP)</h3>
-          <p>
-            Sentiment analysis and opinion mining on large-scale e-commerce reviews using natural language processing.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Movie Recommendation Web Application</h3>
-          <p>
-            Full-stack React and MongoDB application for personalized movie recommendations.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Java-Based Music Player UI Application</h3>
-          <p>
-            Desktop-based music player built using Java Swing with GUI controls, playlist navigation,
-            and smooth audio playback.
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="glass">
-      <p>© 2026 Aakash J | AI & Robotics Portfolio</p>
-    </footer>
   </div>
+</section>
 
-  <!-- Wave Background -->
-  <div class="wave-bg">
-    <svg class="wave-svg" viewBox="0 0 1200 200" preserveAspectRatio="none">
-      <path class="wave1" d="M0,100 C300,200 900,0 1200,100 L1200,200 L0,200 Z"></path>
-      <path class="wave2" d="M0,100 C300,200 900,0 1200,100 L1200,200 L0,200 Z"></path>
-    </svg>
+  <!-- Projects -->
+  <section class="glass section">
+  <h2>Featured Projects</h2>
+  <div class="card-grid project-grid">
+
+    <div class="card project-card"
+      data-title="Underwater Object Detection & Tracking"
+      data-desc="YOLOv8-based real-time underwater perception system optimized for low-visibility environments and robotic vision.">
+      <h3>Underwater Object Detection & Tracking (YOLOv8)</h3>
+      <p>Real-time YOLOv8 + OpenCV system for underwater environments.</p>
+    </div>
+
+    <div class="card project-card"
+      data-title="Heart Attack Risk Prediction"
+      data-desc="Retinal image processing pipeline using Canny edge detection and vessel feature extraction for cardiovascular risk analysis.">
+      <h3>Heart Attack Risk Prediction</h3>
+      <p>Retinal image processing for cardiovascular risk.</p>
+    </div>
+
+    <div class="card project-card"
+      data-title="Respiratory Sound Disease Prediction"
+      data-desc="MFCC-based respiratory audio classification deployed with Edge AI for real-time healthcare monitoring.">
+      <h3>Respiratory Sound Disease (Edge AI)</h3>
+      <p>Audio-based disease classification with Edge AI.</p>
+    </div>
+
+    <div class="card project-card"
+      data-title="Sign Language to English Conversion"
+      data-desc="YOLOv5 real-time sign language gesture detection and translation for accessibility.">
+      <h3>Sign Language to English Conversion</h3>
+      <p>YOLOv5-based gesture translation system.</p>
+    </div>
+
+    <div class="card project-card"
+      data-title="Reinforcement Learning Control System"
+      data-desc="RL agent trained in simulation to learn optimal control policies using reward-based learning.">
+      <h3>Reinforcement Learning Control</h3>
+      <p>RL-based autonomous control in simulation.</p>
+    </div>
+
+    <div class="card project-card"
+      data-title="Cricket Ball Tracking System"
+      data-desc="High-speed cricket ball detection and tracking using YOLOv4 and OpenCV for sports analytics.">
+      <h3>Cricket Ball Tracking</h3>
+      <p>High-speed sports analytics system.</p>
+    </div>
+
+    <div class="card project-card"
+      data-title="ISBN-Based Book Metadata Automation"
+      data-desc="Python GUI tool to enrich Excel files using ISBN with Google Books and Open Library APIs.">
+      <h3>ISBN-Based Book Metadata Automation</h3>
+      <p>Automated Excel enrichment using ISBN + APIs.</p>
+    </div>
+
+    <div class="card project-card"
+      data-title="Electric Car Popularity Forecasting"
+      data-desc="Time-series forecasting using AutoTS and Google Trends to predict EV popularity trends.">
+      <h3>Electric Car Popularity Forecasting</h3>
+      <p>Time-series forecasting using Google Trends.</p>
+    </div>
+
+    <div class="card project-card"
+      data-title="Flipkart & Amazon Review Analysis"
+      data-desc="Sentiment analysis and opinion mining on large-scale e-commerce reviews using NLP.">
+      <h3>Flipkart & Amazon Review Analysis (NLP)</h3>
+      <p>Sentiment analysis on e-commerce reviews.</p>
+    </div>
+
+    <div class="card project-card"
+      data-title="Movie Recommendation Web Application"
+      data-desc="Full-stack React + MongoDB application for personalized movie recommendations.">
+      <h3>Movie Recommendation Web Application</h3>
+      <p>Personalized movie recommendations.</p>
+    </div>
+
+    <div class="card project-card"
+      data-title="Java-Based Music Player UI Application"
+      data-desc="Desktop-based Java Swing music player with GUI controls and smooth audio playback.">
+      <h3>Java-Based Music Player UI Application</h3>
+      <p>Desktop music player with Java Swing UI.</p>
+    </div>
+
+    <div class="card project-card"
+      data-title="Retinal Vessel Extraction & Thickness Measurement"
+      data-desc="Image processing pipeline to extract retinal vessels and compute vessel thickness using Canny edge detection.">
+      <h3>Retinal Vessel Extraction & Thickness Measurement</h3>
+      <p>Automated retinal vessel extraction & analysis.</p>
+    </div>
+
+    <div class="card project-card"
+      data-title="Tamil LLM Text Simplification Tool"
+      data-desc="Low-resource Tamil NLP system for sentence simplification using LLM fine-tuning.">
+      <h3>Tamil LLM Text Simplification Tool</h3>
+      <p>Tamil NLP + LLM-based text simplification.</p>
+    </div>
+
   </div>
+</section>
+
+  <!-- GitHub Stats -->
+  <section class="glass section">
+    <h2>GitHub Activity</h2>
+    <img 
+      src="https://github-readme-stats.vercel.app/api?username=DarkAakrin17&show_icons=true&theme=tokyonight" 
+      alt="GitHub Stats"
+      style="max-width:100%; border-radius:10px;"
+    />
+  </section>
+
+  <footer class="glass">
+    <p>© 2026 Aakash J | AI & Robotics Portfolio</p>
+  </footer>
+</div>
+
+<!-- Project Modal -->
+<div id="projectModal" class="project-modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h3 id="modalTitle"></h3>
+    <p id="modalDesc"></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
