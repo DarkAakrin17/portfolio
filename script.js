@@ -1,59 +1,121 @@
-// Scroll Reveal
-document.querySelectorAll('.glass, .card').forEach(el => {
-  const reveal = () => {
-    if (el.getBoundingClientRect().top < window.innerHeight - 80) {
-      el.classList.add('reveal');
-    }
-  };
-  window.addEventListener('scroll', reveal);
-  reveal();
-});
+// ===============================
+// SAFE SCRIPT.JS (GitHub Pages)
+// ===============================
 
-// Theme Toggle
-const toggleBtn = document.getElementById('themeToggle');
-toggleBtn.onclick = () => {
-  document.body.classList.toggle('light');
-  toggleBtn.textContent = document.body.classList.contains('light') ? '🌞' : '🌙';
-};
+// -------- Scroll Reveal --------
+(function () {
+  const revealElements = document.querySelectorAll('.glass, .card');
+  if (!revealElements.length) return;
 
-// Skill Bars
-document.querySelectorAll('.fill').forEach(fill => {
-  setTimeout(() => fill.style.width = fill.dataset.level + '%', 800);
-});
+  function revealOnScroll() {
+    revealElements.forEach(el => {
+      try {
+        if (el.getBoundingClientRect().top < window.innerHeight - 80) {
+          el.classList.add('reveal');
+        }
+      } catch (e) {
+        console.warn('Reveal error:', e);
+      }
+    });
+  }
 
-// Project Modal
-const modal = document.getElementById('projectModal');
-const modalTitle = document.getElementById('modalTitle');
-const modalDesc = document.getElementById('modalDesc');
-document.querySelectorAll('.project-card').forEach(card => {
-  card.onclick = () => {
-    modalTitle.textContent = card.dataset.title;
-    modalDesc.textContent = card.dataset.desc;
-    modal.style.display = 'flex';
-  };
-});
-document.querySelector('.close-modal').onclick = () => modal.style.display = 'none';
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll();
+})();
 
-// Particle Background
-const canvas = document.getElementById('particles');
-const ctx = canvas.getContext('2d');
-let w,h,particles=[];
-function resize(){ w=canvas.width=innerWidth; h=canvas.height=innerHeight; }
-resize(); window.onresize=resize;
 
-for(let i=0;i<80;i++) particles.push({x:Math.random()*w,y:Math.random()*h,dx:Math.random()-0.5,dy:Math.random()-0.5,r:Math.random()*2+1});
+// -------- Theme Toggle --------
+(function () {
+  const toggleBtn = document.getElementById('themeToggle');
+  if (!toggleBtn) return;
 
-function animate(){
-  ctx.clearRect(0,0,w,h);
-  particles.forEach(p=>{
-    p.x+=p.dx; p.y+=p.dy;
-    if(p.x<0||p.x>w) p.dx*=-1;
-    if(p.y<0||p.y>h) p.dy*=-1;
-    ctx.beginPath();
-    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-    ctx.fillStyle='rgba(0,242,255,0.3)';
-    ctx.fill();
+  toggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('light');
+    toggleBtn.textContent =
+      document.body.classList.contains('light') ? '🌞' : '🌙';
   });
-  requestAnimationFrame(animate);
-}
-animate();
+})();
+
+
+// -------- Project Modal --------
+(function () {
+  const modal = document.getElementById('projectModal');
+  const modalTitle = document.getElementById('modalTitle');
+  const modalDesc = document.getElementById('modalDesc');
+  const closeModal = document.querySelector('.close-modal');
+
+  if (!modal || !modalTitle || !modalDesc) return;
+
+  document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', () => {
+      try {
+        modalTitle.textContent = card.dataset.title || '';
+        modalDesc.textContent = card.dataset.desc || '';
+        modal.style.display = 'flex';
+      } catch (e) {
+        console.warn('Modal error:', e);
+      }
+    });
+  });
+
+  if (closeModal) {
+    closeModal.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+  }
+
+  modal.addEventListener('click', e => {
+    if (e.target === modal) modal.style.display = 'none';
+  });
+})();
+
+
+// -------- Particle Background (SAFE) --------
+(function () {
+  const canvas = document.getElementById('particles');
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d');
+  let w, h;
+  const particles = [];
+
+  function resize() {
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  for (let i = 0; i < 60; i++) {
+    particles.push({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      r: Math.random() * 2 + 1,
+      dx: Math.random() - 0.5,
+      dy: Math.random() - 0.5
+    });
+  }
+
+  function animate() {
+    try {
+      ctx.clearRect(0, 0, w, h);
+      particles.forEach(p => {
+        p.x += p.dx;
+        p.y += p.dy;
+
+        if (p.x < 0 || p.x > w) p.dx *= -1;
+        if (p.y < 0 || p.y > h) p.dy *= -1;
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(0,242,255,0.25)';
+        ctx.fill();
+      });
+      requestAnimationFrame(animate);
+    } catch (e) {
+      console.warn('Particles error:', e);
+    }
+  }
+
+  animate();
+})();
