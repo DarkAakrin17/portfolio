@@ -13,7 +13,51 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* Layout Tweaks */
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
 
+.header-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.tagline {
+  font-family: var(--font-mono);
+  color: var(--accent-cyan);
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.contact-info {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Ensure the terminal doesn't get too wide */
+.terminal-window {
+  flex: 1;
+  min-width: 350px;
+  max-width: 500px;
+}
+
+/* Project Grid Specifics */
+.project-grid .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-grid h3 {
+  color: var(--accent-cyan);
+  border-left: 3px solid var(--accent-cyan);
+  padding-left: 10px;
+}
 body {
   font-family: 'Inter', -apple-system, sans-serif;
   background-color: var(--bg-dark);
