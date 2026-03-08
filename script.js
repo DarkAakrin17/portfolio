@@ -475,7 +475,7 @@ function drawParticles() {
       ctx.beginPath();
       ctx.moveTo(p.x, p.y);
       ctx.lineTo(particleMouseX, particleMouseY);
-      ctx.strokeStyle = `rgba(124, 58, 237, ${opacity})`;
+      ctx.strokeStyle = `rgba(16, 185, 129, ${opacity})`;
       ctx.lineWidth = 0.8;
       ctx.stroke();
 
@@ -512,7 +512,7 @@ function drawParticles() {
   if (particleMouseX > 0 && particleMouseY > 0) {
     ctx.beginPath();
     ctx.arc(particleMouseX, particleMouseY, 3, 0, Math.PI * 2);
-    ctx.fillStyle = 'rgba(124, 58, 237, 0.5)';
+    ctx.fillStyle = 'rgba(16, 185, 129, 0.5)';
     ctx.fill();
   }
 
