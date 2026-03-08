@@ -1,244 +1,600 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aakash Jayapaul Portfolio</title>
+  <title>Aakash Jayapaul — Edge AI & ML Engineer</title>
+  <meta name="description"
+    content="Portfolio of Aakash Jayapaul — AI/ML Engineer specializing in Edge AI, Computer Vision, and Real-Time Deep Learning Systems." />
+  <meta property="og:title" content="Aakash Jayapaul — Edge AI & ML Engineer" />
+  <meta property="og:description"
+    content="Building intelligent systems at the edge. Computer Vision, Deep Learning, and Real-Time Inference." />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<canvas id="particles"></canvas>
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <canvas id="particles"></canvas>
 
-<div class="container">
-  <header class="glass header-flex">
-    <div class="header-text">
-      <h1>Aakash Jayapaul</h1>
-      <p class="tagline">AI/ML Engineer | Computer Vision | Edge AI</p>
-      <div class="contact-info">
-        <span>📞 +91 9361959211</span> | 
-        <span>📧 aakashkarthi2004@gmail.com</span>
-      </div>
-    </div>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="nav-logo">AJ</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button></li>
+    </ul>
+  </nav>
 
-    <button id="themeToggle" class="theme-toggle">🌙</button>
-
-    <div class="terminal-window">
-      <div class="terminal-header">
-        <div class="terminal-buttons">
-          <span class="dot red"></span>
-          <span class="dot yellow"></span>
-          <span class="dot green"></span>
+  <!-- Hero -->
+  <section class="hero section" id="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="hero-badge">
+            <span class="dot-pulse"></span>
+            Open to Opportunities
+          </div>
+          <h1><span id="greeting">Hi</span>, I'm <span class="name-gradient">Aakash Jayapaul</span> <span
+              class="greeting-emoji">👋</span></h1>
+          <div class="hero-role">
+            <span id="typed-role"></span><span class="cursor-blink"></span>
+          </div>
+          <p class="hero-desc">
+            I design and deploy AI models on edge hardware — from NVIDIA Jetson to TFLite on mobile.
+            My work spans underwater robotics, healthcare diagnostics, and real-time inference pipelines.
+            Turning research into production-ready embedded intelligence.
+          </p>
+          <div class="hero-cta">
+            <div class="magnetic-wrap"><a href="#projects" class="btn btn-primary">View Projects ↓</a></div>
+            <div class="magnetic-wrap"><a href="https://github.com/DarkAakrin17" target="_blank"
+                class="btn btn-outline">GitHub →</a></div>
+          </div>
         </div>
-        <div class="terminal-title">bash — profile.py</div>
-      </div>
-      <div class="terminal-body">
-        <div class="line"><span class="prompt">>>></span> candidate.location</div>
-        <div class="line output">'Chennai, India'</div>
-        <div class="line"><span class="prompt">>>></span> candidate.focus_areas</div>
-        <div class="line output">['Robotics', 'Edge_AI', 'Computer_Vision']</div>
-        <div class="line"><span class="prompt">>>></span> <span class="cursor"></span></div>
+
+        <div class="terminal-window">
+          <div class="terminal-header">
+            <div class="terminal-buttons">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="terminal-title">profile.py — Python 3.11</div>
+          </div>
+          <div class="terminal-body">
+            <div class="line"><span class="comment"># Edge AI Engineer Profile</span></div>
+            <div class="line"><span class="keyword">class</span> <span class="string">Engineer</span>:</div>
+            <div class="line">&nbsp;&nbsp;name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <span class="string">"Aakash
+                Jayapaul"</span></div>
+            <div class="line">&nbsp;&nbsp;location &nbsp;= <span class="string">"Chennai, India"</span></div>
+            <div class="line">&nbsp;&nbsp;focus &nbsp;&nbsp;&nbsp;&nbsp;= [<span class="string">"Edge_AI"</span>, <span
+                class="string">"CV"</span>,</div>
+            <div class="line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
+                class="string">"Deep_Learning"</span>, <span class="string">"Robotics"</span>]</div>
+            <div class="line">&nbsp;&nbsp;deploying = <span class="output">True</span></div>
+            <div class="line"></div>
+            <div class="line"><span class="prompt">>>> </span>Engineer.<span class="keyword">status</span>()</div>
+            <div class="line"><span class="output">'Building AI at the edge 🚀'</span></div>
+            <div id="terminalOutput"></div>
+          </div>
+          <div class="terminal-interactive">
+            <span class="prompt">>>> </span>
+            <input type="text" class="prompt-input" id="terminalInput"
+              placeholder="Try: skills, projects, contact, help" autocomplete="off" spellcheck="false" />
+          </div>
+        </div>
       </div>
     </div>
-  </header>
+  </section>
 
   <!-- About -->
-  <section class="glass section">
-    <h2>About Me</h2>
-    <p>
-      AI/ML undergraduate specializing in <strong>computer vision, Edge AI, and intelligent systems.</strong> Strong hands-on experience in
-building real-time deep learning applications across healthcare, autonomous perception, and accessibility. Actively pursuing
-opportunities and graduate studies in Robotics and Applied Artificial Intelligence.
-    </p>
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title reveal-el">About Me</h2>
+      <p class="section-subtitle reveal-el">Building intelligent systems that work in the real world.</p>
+      <div class="about-grid">
+        <div class="about-text reveal-el">
+          <p>
+            I'm an AI/ML undergraduate specializing in <strong>Computer Vision, Edge AI, and intelligent real-time
+              systems</strong>.
+            My work focuses on deploying deep learning models into resource-constrained environments — making AI fast,
+            lightweight,
+            and production-ready.
+          </p>
+          <br />
+          <p>
+            With hands-on experience spanning <strong>healthcare diagnostics, underwater robotics, accessibility tech,
+              and sports analytics</strong>,
+            I bring a systems-level perspective to every project. I'm passionate about the intersection of
+            <strong>model optimization, embedded inference, and computer vision</strong>.
+          </p>
+          <br />
+          <p>
+            Currently pursuing graduate studies in <strong>Robotics and Applied AI</strong>, and actively seeking
+            opportunities
+            to push the boundaries of edge intelligence.
+          </p>
+        </div>
+        <div class="stats-grid stagger-children">
+          <div class="stat-card glass reveal-el">
+            <div class="stat-number" data-target="14">0</div>
+            <div class="stat-label">Projects Built</div>
+          </div>
+          <div class="stat-card glass reveal-el">
+            <div class="stat-number" data-target="6">0</div>
+            <div class="stat-label">AI Domains</div>
+          </div>
+          <div class="stat-card glass reveal-el">
+            <div class="stat-number" data-target="5">0</div>
+            <div class="stat-label">DL Frameworks</div>
+          </div>
+          <div class="stat-card glass reveal-el">
+            <div class="stat-number" data-target="3">0</div>
+            <div class="stat-label">Edge Deployments</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Skills -->
-  <section class="glass section">
-  <h2>Core Skills</h2>
-
-  <div class="skill-matrix">
-
-    <div class="skill-group">
-      <h3>Computer Vision</h3>
-      <div class="skill-pill">OpenCV</div>
-      <div class="skill-pill">YOLOv5</div>
-      <div class="skill-pill">YOLOv8</div>
-      <div class="skill-pill">Image Processing</div>
-      <div class="skill-pill">Object Detection</div>
-      <div class="skill-pill">Tracking</div>
+  <section class="section" id="skills">
+    <div class="container">
+      <h2 class="section-title reveal-el">Core Skills</h2>
+      <p class="section-subtitle reveal-el">Technologies and frameworks I use to build intelligent systems.</p>
+      <div class="skills-grid stagger-children">
+        <div class="skill-card glass reveal-el">
+          <div class="skill-card-header">
+            <div class="skill-icon cv">👁️</div>
+            <h3>Computer Vision</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">OpenCV</span><span class="skill-tag">YOLOv5</span><span
+              class="skill-tag">YOLOv8</span>
+            <span class="skill-tag">Object Detection</span><span class="skill-tag">Tracking</span><span
+              class="skill-tag">Image Processing</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-item"><span class="label">Proficiency</span>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill fill-cyan" data-level="92"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card glass reveal-el">
+          <div class="skill-card-header">
+            <div class="skill-icon dl">🧠</div>
+            <h3>Deep Learning</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">PyTorch</span><span class="skill-tag">TensorFlow</span><span
+              class="skill-tag">CNNs</span>
+            <span class="skill-tag">Transfer Learning</span><span class="skill-tag">U-Net</span><span
+              class="skill-tag">Model Optimization</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-item"><span class="label">Proficiency</span>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill fill-violet" data-level="90"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card glass reveal-el">
+          <div class="skill-card-header">
+            <div class="skill-icon edge">⚡</div>
+            <h3>Edge AI & Deployment</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">TensorFlow Lite</span><span class="skill-tag">TF.js</span><span
+              class="skill-tag">ONNX</span>
+            <span class="skill-tag">Model Quantization</span><span class="skill-tag">Real-Time Inference</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-item"><span class="label">Proficiency</span>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill fill-emerald" data-level="88"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card glass reveal-el">
+          <div class="skill-card-header">
+            <div class="skill-icon rl">🎮</div>
+            <h3>Reinforcement Learning</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">OpenAI Gym</span><span class="skill-tag">Policy Learning</span>
+            <span class="skill-tag">Reward Shaping</span><span class="skill-tag">Simulation</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-item"><span class="label">Proficiency</span>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill fill-amber" data-level="78"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card glass reveal-el">
+          <div class="skill-card-header">
+            <div class="skill-icon nlp">💬</div>
+            <h3>Audio & NLP</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">MFCC</span><span class="skill-tag">Audio Processing</span><span
+              class="skill-tag">Sentiment Analysis</span>
+            <span class="skill-tag">LLM Fine-Tuning</span><span class="skill-tag">Low-Resource NLP</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-item"><span class="label">Proficiency</span>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill fill-rose" data-level="82"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-card glass reveal-el">
+          <div class="skill-card-header">
+            <div class="skill-icon sw">🛠️</div>
+            <h3>Software & Data</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span><span class="skill-tag">Java</span><span class="skill-tag">REST
+              APIs</span>
+            <span class="skill-tag">MongoDB</span><span class="skill-tag">pandas</span><span
+              class="skill-tag">NumPy</span><span class="skill-tag">Git</span>
+          </div>
+          <div class="skill-bar-wrap">
+            <div class="skill-bar-item"><span class="label">Proficiency</span>
+              <div class="skill-bar-track">
+                <div class="skill-bar-fill fill-cyan" data-level="85"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="skill-group">
-      <h3>Deep Learning</h3>
-      <div class="skill-pill">PyTorch</div>
-      <div class="skill-pill">TensorFlow</div>
-      <div class="skill-pill">CNNs</div>
-      <div class="skill-pill">Transfer Learning</div>
-      <div class="skill-pill">Model Optimization</div>
-    </div>
-
-    <div class="skill-group">
-      <h3>Edge AI & Deployment</h3>
-      <div class="skill-pill">TensorFlow Lite</div>
-      <div class="skill-pill">Edge AI</div>
-      <div class="skill-pill">Real-Time Inference</div>
-      <div class="skill-pill">Model Quantization</div>
-    </div>
-
-    <div class="skill-group">
-      <h3>Reinforcement Learning</h3>
-      <div class="skill-pill">OpenAI Gym</div>
-      <div class="skill-pill">Policy Learning</div>
-      <div class="skill-pill">Reward Optimization</div>
-      <div class="skill-pill">Simulation</div>
-    </div>
-
-    <div class="skill-group">
-      <h3>Audio & NLP</h3>
-      <div class="skill-pill">MFCC</div>
-      <div class="skill-pill">Audio Signal Processing</div>
-      <div class="skill-pill">Sentiment Analysis</div>
-      <div class="skill-pill">Text Processing</div>
-      <div class="skill-pill">Low-Resource NLP</div>
-    </div>
-
-    <div class="skill-group">
-      <h3>Software & Data</h3>
-      <div class="skill-pill">Python</div>
-      <div class="skill-pill">Java</div>
-      <div class="skill-pill">REST APIs</div>
-      <div class="skill-pill">MongoDB</div>
-      <div class="skill-pill">pandas</div>
-      <div class="skill-pill">NumPy</div>
-      <div class="skill-pill">Git</div>
-    </div>
-
-  </div>
-</section>
-
-  <!-- Projects -->
-  <section class="glass section">
-  <h2>Featured Projects</h2>
-  <div class="card-grid project-grid">
-
-    <div class="card project-card"
-      data-title="Underwater Object Detection & Tracking"
-      data-desc="YOLOv8-based real-time underwater perception system optimized for low-visibility environments and robotic vision.">
-      <h3>Underwater Object Detection & Tracking (YOLOv8)</h3>
-      <p>Real-time YOLOv8 + OpenCV system for underwater environments.</p>
-    </div>
-
-    <div class="card project-card"
-      data-title="Heart Attack Risk Prediction"
-      data-desc="Retinal image processing pipeline using Canny edge detection and vessel feature extraction for cardiovascular risk analysis.">
-      <h3>Heart Attack Risk Prediction</h3>
-      <p>Retinal image processing for cardiovascular risk.</p>
-    </div>
-
-    <div class="card project-card"
-      data-title="Respiratory Sound Disease Prediction"
-      data-desc="MFCC-based respiratory audio classification deployed with Edge AI for real-time healthcare monitoring.">
-      <h3>Respiratory Sound Disease (Edge AI)</h3>
-      <p>Audio-based disease classification with Edge AI.</p>
-    </div>
-
-    <div class="card project-card"
-      data-title="Sign Language to English Conversion"
-      data-desc="YOLOv5 real-time sign language gesture detection and translation for accessibility.">
-      <h3>Sign Language to English Conversion</h3>
-      <p>YOLOv5-based gesture translation system.</p>
-    </div>
-
-    <div class="card project-card"
-      data-title="Reinforcement Learning Control System"
-      data-desc="RL agent trained in simulation to learn optimal control policies using reward-based learning.">
-      <h3>Reinforcement Learning Control</h3>
-      <p>RL-based autonomous control in simulation.</p>
-    </div>
-
-    <div class="card project-card"
-      data-title="Cricket Ball Tracking System"
-      data-desc="High-speed cricket ball detection and tracking using YOLOv4 and OpenCV for sports analytics.">
-      <h3>Cricket Ball Tracking</h3>
-      <p>High-speed sports analytics system.</p>
-    </div>
-
-    <div class="card project-card"
-      data-title="ISBN-Based Book Metadata Automation"
-      data-desc="Python GUI tool to enrich Excel files using ISBN with Google Books and Open Library APIs.">
-      <h3>ISBN-Based Book Metadata Automation</h3>
-      <p>Automated Excel enrichment using ISBN + APIs.</p>
-    </div>
-
-    <div class="card project-card"
-      data-title="Electric Car Popularity Forecasting"
-      data-desc="Time-series forecasting using AutoTS and Google Trends to predict EV popularity trends.">
-      <h3>Electric Car Popularity Forecasting</h3>
-      <p>Time-series forecasting using Google Trends.</p>
-    </div>
-
-    <div class="card project-card"
-      data-title="Flipkart & Amazon Review Analysis"
-      data-desc="Sentiment analysis and opinion mining on large-scale e-commerce reviews using NLP.">
-      <h3>Flipkart & Amazon Review Analysis (NLP)</h3>
-      <p>Sentiment analysis on e-commerce reviews.</p>
-    </div>
-
-    <div class="card project-card"
-      data-title="Movie Recommendation Web Application"
-      data-desc="Full-stack React + MongoDB application for personalized movie recommendations.">
-      <h3>Movie Recommendation Web Application</h3>
-      <p>Personalized movie recommendations.</p>
-    </div>
-
-    <div class="card project-card"
-      data-title="Java-Based Music Player UI Application"
-      data-desc="Desktop-based Java Swing music player with GUI controls and smooth audio playback.">
-      <h3>Java-Based Music Player UI Application</h3>
-      <p>Desktop music player with Java Swing UI.</p>
-    </div>
-
-    <div class="card project-card"
-      data-title="Retinal Vessel Extraction & Thickness Measurement"
-      data-desc="Image processing pipeline to extract retinal vessels and compute vessel thickness using Canny edge detection.">
-      <h3>Retinal Vessel Extraction & Thickness Measurement</h3>
-      <p>Automated retinal vessel extraction & analysis.</p>
-    </div>
-
-    <div class="card project-card"
-      data-title="Tamil LLM Text Simplification Tool"
-      data-desc="Low-resource Tamil NLP system for sentence simplification using LLM fine-tuning.">
-      <h3>Tamil LLM Text Simplification Tool</h3>
-      <p>Tamil NLP + LLM-based text simplification.</p>
-    </div>
-
-  </div>
-</section>
-
-  <!-- GitHub Stats -->
-  <section class="glass section">
-    <h2>GitHub Activity</h2>
-    <img 
-      src="https://github-readme-stats.vercel.app/api?username=DarkAakrin17&show_icons=true&theme=tokyonight" 
-      alt="GitHub Stats"
-      style="max-width:100%; border-radius:10px;"
-    />
   </section>
 
-  <footer class="glass">
-    <p>© 2026 Aakash Jayapaul | AI & Robotics Portfolio</p>
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title reveal-el">Featured Projects</h2>
+      <p class="section-subtitle reveal-el">Real-world AI systems I've designed, built, and deployed.</p>
+      <div class="filter-bar reveal-el">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="edge">Edge AI</button>
+        <button class="filter-btn" data-filter="cv">Computer Vision</button>
+        <button class="filter-btn" data-filter="health">Healthcare</button>
+        <button class="filter-btn" data-filter="nlp">NLP</button>
+        <button class="filter-btn" data-filter="sw">Software</button>
+      </div>
+      <div class="project-grid stagger-children">
+
+        <div class="project-card glass reveal-el" data-domain="cv" data-title="Underwater Object Detection & Tracking"
+          data-desc="YOLOv8-based real-time underwater perception system optimized for low-visibility marine environments. Custom-trained on underwater datasets with augmentation for turbidity, color distortion, and motion blur. Integrated with OpenCV for multi-object tracking. Designed for AUV perception pipelines.">
+          <h3>Underwater Object Detection & Tracking</h3>
+          <p class="desc">Real-time YOLOv8 + OpenCV system for underwater environments.</p>
+          <div class="project-tech"><span class="tech-pill">YOLOv8</span><span class="tech-pill">OpenCV</span><span
+              class="tech-pill">Python</span></div>
+        </div>
+
+        <div class="project-card glass reveal-el" data-domain="edge" data-title="Underwater Edge AI Pipeline"
+          data-desc="End-to-end Edge AI pipeline for real-time underwater object detection on NVIDIA Jetson. Merges RUOD, TrashCan 1.0, and CADDY datasets into a unified three-class system (fish, debris, divers). Features CLAHE image enhancement, YOLOv8m fine-tuning, structured pruning, quantization-aware training, ONNX export, and TensorRT engine conversion targeting 20+ FPS on edge hardware.">
+          <h3>Underwater Edge AI Pipeline</h3>
+          <p class="desc">NVIDIA Jetson deployment with YOLOv8m + TensorRT at 20+ FPS.</p>
+          <div class="project-tech"><span class="tech-pill">YOLOv8</span><span class="tech-pill">TensorRT</span><span
+              class="tech-pill">Jetson</span><span class="tech-pill">ONNX</span></div>
+        </div>
+
+        <div class="project-card glass reveal-el" data-domain="health" data-title="Heart Attack Risk Prediction"
+          data-desc="Hybrid AI framework for cardiovascular risk stratification using retinal fundus images. U-Net segmentation for vessel extraction, morphological biomarker computation, and XGBoost classification. Fully explainable with SHAP values.">
+          <h3>Heart Attack Risk Prediction</h3>
+          <p class="desc">Retinal image analysis for cardiovascular risk using U-Net + XGBoost.</p>
+          <div class="project-tech"><span class="tech-pill">U-Net</span><span class="tech-pill">XGBoost</span><span
+              class="tech-pill">SHAP</span></div>
+        </div>
+
+        <div class="project-card glass reveal-el" data-domain="edge health"
+          data-title="Respiratory Sound Disease (Edge AI)"
+          data-desc="MFCC-based respiratory audio classification deployed as an Edge AI system. Lightweight CNN trained on lung sounds, deployed via TensorFlow Lite for on-device inference in resource-constrained clinical settings.">
+          <h3>Respiratory Sound Disease (Edge AI)</h3>
+          <p class="desc">Audio-based disease classification with Edge AI via TFLite.</p>
+          <div class="project-tech"><span class="tech-pill">MFCC</span><span class="tech-pill">TFLite</span><span
+              class="tech-pill">Edge AI</span></div>
+        </div>
+
+        <div class="project-card glass reveal-el" data-domain="cv" data-title="Sign Language to English Conversion"
+          data-desc="YOLOv5-based real-time sign language gesture detection and translation for accessibility. Custom-trained on ASL dataset with real-time English text output.">
+          <h3>Sign Language to English</h3>
+          <p class="desc">YOLOv5-based real-time gesture detection & translation.</p>
+          <div class="project-tech"><span class="tech-pill">YOLOv5</span><span class="tech-pill">OpenCV</span><span
+              class="tech-pill">Python</span></div>
+        </div>
+
+        <div class="project-card glass reveal-el" data-domain="sw" data-title="Reinforcement Learning Control"
+          data-desc="RL agent trained in OpenAI Gym to learn optimal control policies. Implemented policy gradient and Q-learning with custom reward shaping for autonomous navigation.">
+          <h3>RL Control System</h3>
+          <p class="desc">RL-based autonomous control with policy learning in simulation.</p>
+          <div class="project-tech"><span class="tech-pill">OpenAI Gym</span><span class="tech-pill">PyTorch</span><span
+              class="tech-pill">RL</span></div>
+        </div>
+
+        <div class="project-card glass reveal-el" data-domain="cv" data-title="Cricket Ball Tracking"
+          data-desc="High-speed cricket ball detection and tracking using YOLOv4 and OpenCV. Trajectory, speed estimation, and bounce prediction for sports broadcast analytics.">
+          <h3>Cricket Ball Tracking</h3>
+          <p class="desc">High-speed sports analytics with YOLOv4 trajectory tracking.</p>
+          <div class="project-tech"><span class="tech-pill">YOLOv4</span><span class="tech-pill">OpenCV</span><span
+              class="tech-pill">Analytics</span></div>
+        </div>
+
+        <div class="project-card glass reveal-el" data-domain="edge" data-title="AI Traffic Prediction (Edge)"
+          data-desc="PyTorch traffic prediction model trained on Chennai road data with city-specific patterns. Exported to TensorFlow.js for real-time browser inference. Full pipeline from OSM data to edge deployment.">
+          <h3>AI Traffic Prediction (Edge)</h3>
+          <p class="desc">PyTorch traffic model deployed to browser via TF.js.</p>
+          <div class="project-tech"><span class="tech-pill">PyTorch</span><span class="tech-pill">TF.js</span><span
+              class="tech-pill">Edge AI</span></div>
+        </div>
+
+
+
+        <div class="project-card glass reveal-el" data-domain="nlp" data-title="E-Commerce Sentiment Analysis"
+          data-desc="NLP sentiment analysis on large-scale Flipkart & Amazon reviews using TF-IDF and classifier ensembles.">
+          <h3>E-Commerce Sentiment Analysis</h3>
+          <p class="desc">NLP sentiment analysis on product reviews at scale.</p>
+          <div class="project-tech"><span class="tech-pill">NLP</span><span class="tech-pill">TF-IDF</span><span
+              class="tech-pill">Python</span></div>
+        </div>
+
+        <div class="project-card glass reveal-el" data-domain="nlp" data-title="Tamil LLM Text Simplification"
+          data-desc="Low-resource Tamil NLP for sentence simplification using IndicBART fine-tuning on curated Tamil corpora. Targeted text simplification for accessibility in underrepresented languages.">
+          <h3>Tamil LLM Text Simplification</h3>
+          <p class="desc">Low-resource Tamil NLP with IndicBART fine-tuning.</p>
+          <div class="project-tech"><span class="tech-pill">IndicBART</span><span class="tech-pill">NLP</span><span
+              class="tech-pill">Fine-Tuning</span></div>
+        </div>
+
+        <div class="project-card glass reveal-el" data-domain="sw" data-title="Book Metadata Automation"
+          data-desc="Python GUI tool for Excel enrichment using ISBN lookups via Google Books and Open Library APIs.">
+          <h3>Book Metadata Automation</h3>
+          <p class="desc">ISBN-based Excel enrichment via REST APIs.</p>
+          <div class="project-tech"><span class="tech-pill">Python</span><span class="tech-pill">REST APIs</span><span
+              class="tech-pill">GUI</span></div>
+        </div>
+
+        <div class="project-card glass reveal-el" data-domain="sw" data-title="EV Popularity Forecasting"
+          data-desc="Time-series forecasting using AutoTS and Google Trends to predict EV adoption patterns.">
+          <h3>EV Popularity Forecasting</h3>
+          <p class="desc">Time-series forecasting of EV trends.</p>
+          <div class="project-tech"><span class="tech-pill">AutoTS</span><span class="tech-pill">Python</span><span
+              class="tech-pill">Forecasting</span></div>
+        </div>
+
+        <div class="project-card glass reveal-el" data-domain="sw" data-title="Movie Recommendation App"
+          data-desc="Full-stack React + MongoDB personalized movie recommendation system with collaborative filtering and TMDB API integration.">
+          <h3>Movie Recommendation App</h3>
+          <p class="desc">Full-stack React + MongoDB recommendation system.</p>
+          <div class="project-tech"><span class="tech-pill">React</span><span class="tech-pill">MongoDB</span><span
+              class="tech-pill">REST APIs</span></div>
+        </div>
+
+        <div class="project-card glass reveal-el" data-domain="sw" data-title="Java Music Player"
+          data-desc="Desktop-based music player application built with Java Swing. Features smooth audio playback, GUI controls, playlist management, and a modern interface.">
+          <h3>Java Music Player</h3>
+          <p class="desc">Desktop music player with GUI controls and smooth playback.</p>
+          <div class="project-tech"><span class="tech-pill">Java</span><span class="tech-pill">Swing</span><span
+              class="tech-pill">GUI</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="section" id="experience">
+    <div class="container">
+      <h2 class="section-title reveal-el">Experience & Education</h2>
+      <p class="section-subtitle reveal-el">From embedded inference to grad school — building Edge AI in the real world.
+      </p>
+      <div class="timeline">
+
+        <div class="timeline-item reveal-el">
+          <div class="timeline-dot"></div>
+          <div class="timeline-header">
+            <span class="timeline-badge badge-intern">Internship</span>
+            <div class="timeline-date">Feb 2025 — Present</div>
+          </div>
+          <h3>Student Intern — Edge AI</h3>
+          <div class="org"><span class="org-icon">🏫</span> Sri Ramachandra Institute of Higher Education and Research ·
+            Chennai</div>
+          <p>Developing an end-to-end Edge AI pipeline for real-time underwater object detection on NVIDIA Jetson.</p>
+          <div class="timeline-details">
+            <p>Merging RUOD, TrashCan 1.0, and CADDY datasets into a unified three-class detection system (fish, marine
+              debris, divers). Implementing CLAHE-based image enhancement, YOLOv8m fine-tuning with structured pruning,
+              quantization-aware training, and TensorRT export targeting 20+ FPS on edge hardware.</p>
+          </div>
+          <div class="timeline-tech">
+            <span class="tech-pill">YOLOv8</span><span class="tech-pill">TensorRT</span><span
+              class="tech-pill">Jetson</span><span class="tech-pill">ONNX</span><span class="tech-pill">CLAHE</span>
+          </div>
+          <div class="timeline-expand-hint"><span class="arrow">▼</span> Click to expand</div>
+        </div>
+
+        <div class="timeline-item reveal-el">
+          <div class="timeline-dot"></div>
+          <div class="timeline-header">
+            <span class="timeline-badge badge-intern">Internship</span>
+            <div class="timeline-date">Aug 2024 — Oct 2024</div>
+          </div>
+          <h3>Student Intern — AI/ML</h3>
+          <div class="org"><span class="org-icon">🏫</span> Sri Ramachandra Institute of Higher Education and Research ·
+            Chennai</div>
+          <p>Built a heart attack risk prediction system using retinal fundus image analysis.</p>
+          <div class="timeline-details">
+            <p>Developed U-Net segmentation for vessel extraction and XGBoost classification with SHAP explainability
+              for cardiovascular risk stratification. Extracted morphological vascular biomarkers for clinical
+              assessment.</p>
+          </div>
+          <div class="timeline-tech">
+            <span class="tech-pill">U-Net</span><span class="tech-pill">XGBoost</span><span
+              class="tech-pill">SHAP</span><span class="tech-pill">OpenCV</span>
+          </div>
+          <div class="timeline-expand-hint"><span class="arrow">▼</span> Click to expand</div>
+        </div>
+
+        <div class="timeline-item reveal-el">
+          <div class="timeline-dot"></div>
+          <div class="timeline-header">
+            <span class="timeline-badge badge-intern">Internship</span>
+            <div class="timeline-date">Feb 2024 — Apr 2024</div>
+          </div>
+          <h3>Student Intern — Computer Vision</h3>
+          <div class="org"><span class="org-icon">🏫</span> Sri Ramachandra Institute of Higher Education and Research ·
+            Chennai</div>
+          <p>Developed a high-speed cricket ball tracking system for sports analytics.</p>
+          <div class="timeline-details">
+            <p>Built real-time object detection, trajectory prediction, and speed estimation using YOLOv5 and OpenCV.
+              Optimized for match-like video conditions with high-speed ball tracking.</p>
+          </div>
+          <div class="timeline-tech">
+            <span class="tech-pill">YOLOv5</span><span class="tech-pill">OpenCV</span><span
+              class="tech-pill">Python</span>
+          </div>
+          <div class="timeline-expand-hint"><span class="arrow">▼</span> Click to expand</div>
+        </div>
+
+        <div class="timeline-item reveal-el">
+          <div class="timeline-dot"></div>
+          <div class="timeline-header">
+            <span class="timeline-badge badge-intern">Internship</span>
+            <div class="timeline-date">May 2023 — Jul 2023</div>
+          </div>
+          <h3>Student Intern — Full-Stack Development</h3>
+          <div class="org"><span class="org-icon">🏫</span> Sri Ramachandra Institute of Higher Education and Research ·
+            Chennai</div>
+          <p>Built Moviepedia — a movie recommendation web application using ReactJS and TMDB API.</p>
+          <div class="timeline-details">
+            <p>Implemented collaborative filtering, responsive UI design, and REST API integration for personalized
+              content delivery. Full-stack architecture with React frontend.</p>
+          </div>
+          <div class="timeline-tech">
+            <span class="tech-pill">React</span><span class="tech-pill">TMDB API</span><span
+              class="tech-pill">REST</span>
+          </div>
+          <div class="timeline-expand-hint"><span class="arrow">▼</span> Click to expand</div>
+        </div>
+
+        <div class="timeline-item edu-item reveal-el">
+          <div class="timeline-dot"></div>
+          <div class="timeline-header">
+            <span class="timeline-badge badge-edu">Education</span>
+            <div class="timeline-date">Aug 2026 — Sept 2028 (Expected)</div>
+          </div>
+          <h3>M.Sc. in Information Technology (Embedded AI)</h3>
+          <div class="org"><span class="org-icon">🎓</span> IMT Atlantique · Brest, France</div>
+          <p>Graduate studies in embedded AI systems, signal processing, and advanced computing.</p>
+          <div class="timeline-details">
+            <p>Focus on deploying intelligent models in resource-constrained hardware environments. Coursework covers
+              embedded systems design, edge inference optimization, and real-time signal processing.</p>
+          </div>
+          <div class="timeline-tech">
+            <span class="tech-pill">Embedded AI</span><span class="tech-pill">Signal Processing</span><span
+              class="tech-pill">Edge Computing</span>
+          </div>
+          <div class="timeline-expand-hint"><span class="arrow">▼</span> Click to expand</div>
+        </div>
+
+        <div class="timeline-item edu-item reveal-el">
+          <div class="timeline-dot"></div>
+          <div class="timeline-header">
+            <span class="timeline-badge badge-edu">Education</span>
+            <div class="timeline-date">Aug 2022 — 2026</div>
+          </div>
+          <h3>B.Tech in Computer Science (AI & ML)</h3>
+          <div class="org"><span class="org-icon">🎓</span> Sri Ramachandra Institute of Higher Education and Research ·
+            Chennai</div>
+          <p>Specializing in Computer Vision, Deep Learning, and Edge AI.</p>
+          <div class="timeline-details">
+            <p>Coursework spanning neural architectures, reinforcement learning, NLP, and embedded systems. Active in
+              research projects, hackathons, and open-source contributions.</p>
+          </div>
+          <div class="timeline-tech">
+            <span class="tech-pill">Deep Learning</span><span class="tech-pill">Computer Vision</span><span
+              class="tech-pill">Edge AI</span><span class="tech-pill">NLP</span>
+          </div>
+          <div class="timeline-expand-hint"><span class="arrow">▼</span> Click to expand</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title reveal-el">Get in Touch</h2>
+      <p class="section-subtitle reveal-el">Open to collaborations, research opportunities, and grad school discussions.
+      </p>
+      <div class="contact-grid stagger-children">
+        <a href="mailto:aakashkarthi2004@gmail.com" class="contact-card glass reveal-el">
+          <span class="contact-icon">📧</span>
+          <span class="label">Email</span>
+          <span class="value">aakashkarthi2004@gmail.com</span>
+        </a>
+        <a href="https://github.com/DarkAakrin17" target="_blank" class="contact-card glass reveal-el">
+          <span class="contact-icon">💻</span>
+          <span class="label">GitHub</span>
+          <span class="value">DarkAakrin17</span>
+        </a>
+        <a href="tel:+919361959211" class="contact-card glass reveal-el">
+          <span class="contact-icon">📞</span>
+          <span class="label">Phone</span>
+          <span class="value">+91 9361959211</span>
+        </a>
+        <a href="https://linkedin.com/in/aakash-j-487967270" target="_blank" class="contact-card glass reveal-el">
+          <span class="contact-icon">🔗</span>
+          <span class="label">LinkedIn</span>
+          <span class="value">Aakash Jayapaul</span>
+        </a>
+        <a href="#" class="contact-card glass reveal-el">
+          <span class="contact-icon">📍</span>
+          <span class="label">Location</span>
+          <span class="value">Chennai, India</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Aakash Jayapaul — Edge AI & ML Engineer</p>
+    </div>
   </footer>
-</div>
 
-<!-- Project Modal -->
-<div id="projectModal" class="project-modal">
-  <div class="modal-content">
-    <span class="close-modal">&times;</span>
-    <h3 id="modalTitle"></h3>
-    <p id="modalDesc"></p>
+  <!-- Project Modal -->
+  <div id="projectModal" class="project-modal">
+    <div class="modal-content">
+      <button class="close-modal" aria-label="Close">&times;</button>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+    </div>
   </div>
-</div>
 
-<script src="script.js"></script>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
