@@ -26,13 +26,14 @@
     <a href="#hero" class="nav-logo">AJ</a>
     <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#hero" data-en="Home" data-fr="Accueil">Home</a></li>
+      <li><a href="#about" data-en="About" data-fr="À propos">About</a></li>
+      <li><a href="#skills" data-en="Skills" data-fr="Compétences">Skills</a></li>
+      <li><a href="#projects" data-en="Projects" data-fr="Projets">Projects</a></li>
+      <li><a href="#experience" data-en="Experience" data-fr="Expérience">Experience</a></li>
+      <li><a href="#contact" data-en="Contact" data-fr="Contact">Contact</a></li>
       <li><button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button></li>
+      <li><button id="langToggle" class="theme-toggle lang-toggle" aria-label="Switch language" data-lang="en">FR</button></li>
     </ul>
   </nav>
 
@@ -43,22 +44,24 @@
         <div class="hero-text">
           <div class="hero-badge">
             <span class="dot-pulse"></span>
-            Open to Opportunities
+            <span data-en="Open to Opportunities" data-fr="Ouvert aux opportunités">Open to Opportunities</span>
           </div>
-          <h1><span id="greeting">Hi</span>, I'm <span class="name-gradient">Aakash Jayapaul</span> <span
-              class="greeting-emoji">👋</span></h1>
+          <h1><span id="greeting">Hi</span><span data-en=", I'm " data-fr=", je suis ">, I'm </span><span
+              class="name-gradient">Aakash Jayapaul</span> <span class="greeting-emoji">👋</span></h1>
           <div class="hero-role">
             <span id="typed-role"></span><span class="cursor-blink"></span>
           </div>
-          <p class="hero-desc">
+          <p class="hero-desc" data-en="I design and deploy AI models on edge hardware — from NVIDIA Jetson to TFLite on mobile. My work spans underwater robotics, healthcare diagnostics, and real-time inference pipelines. Turning research into production-ready embedded intelligence."
+            data-fr="Je conçois et déploie des modèles d'IA sur du matériel embarqué — de NVIDIA Jetson à TFLite sur mobile. Mon travail couvre la robotique sous-marine, le diagnostic médical et les pipelines d'inférence en temps réel. Je transforme la recherche en intelligence embarquée prête pour la production.">
             I design and deploy AI models on edge hardware — from NVIDIA Jetson to TFLite on mobile.
             My work spans underwater robotics, healthcare diagnostics, and real-time inference pipelines.
             Turning research into production-ready embedded intelligence.
           </p>
           <div class="hero-cta">
-            <div class="magnetic-wrap"><a href="#projects" class="btn btn-primary">View Projects ↓</a></div>
+            <div class="magnetic-wrap"><a href="#projects" class="btn btn-primary" data-en="View Projects ↓"
+                data-fr="Voir les projets ↓">View Projects ↓</a></div>
             <div class="magnetic-wrap"><a href="https://github.com/DarkAakrin17" target="_blank"
-                class="btn btn-outline">GitHub →</a></div>
+                class="btn btn-outline" data-en="GitHub →" data-fr="GitHub →">GitHub →</a></div>
           </div>
         </div>
 
@@ -90,6 +93,7 @@
           <div class="terminal-interactive">
             <span class="prompt">>>> </span>
             <input type="text" class="prompt-input" id="terminalInput"
+              data-en="Try: skills, projects, contact, help" data-fr="Essayez : skills, projects, contact, help"
               placeholder="Try: skills, projects, contact, help" autocomplete="off" spellcheck="false" />
           </div>
         </div>
@@ -100,11 +104,14 @@
   <!-- About -->
   <section class="section" id="about">
     <div class="container">
-      <h2 class="section-title reveal-el">About Me</h2>
-      <p class="section-subtitle reveal-el">Building intelligent systems that work in the real world.</p>
+      <h2 class="section-title reveal-el" data-en="About Me" data-fr="À propos de moi">About Me</h2>
+      <p class="section-subtitle reveal-el" data-en="Building intelligent systems that work in the real world."
+        data-fr="Je construis des systèmes intelligents qui fonctionnent dans le monde réel.">Building intelligent
+        systems that work in the real world.</p>
       <div class="about-grid">
         <div class="about-text reveal-el">
-          <p>
+          <p data-en="I'm an AI/ML undergraduate specializing in <strong>Computer Vision, Edge AI, and intelligent real-time systems</strong>. My work focuses on deploying deep learning models into resource-constrained environments — making AI fast, lightweight, and production-ready."
+            data-fr="Je suis étudiant en IA/ML, spécialisé en <strong>vision par ordinateur, IA embarquée et systèmes intelligents temps réel</strong>. Mon travail consiste à déployer des modèles d'apprentissage profond dans des environnements aux ressources limitées — pour rendre l'IA rapide, légère et prête pour la production.">
             I'm an AI/ML undergraduate specializing in <strong>Computer Vision, Edge AI, and intelligent real-time
               systems</strong>.
             My work focuses on deploying deep learning models into resource-constrained environments — making AI fast,
@@ -112,14 +119,16 @@
             and production-ready.
           </p>
           <br />
-          <p>
+          <p data-en="With hands-on experience spanning <strong>healthcare diagnostics, underwater robotics, accessibility tech, and sports analytics</strong>, I bring a systems-level perspective to every project. I'm passionate about the intersection of <strong>model optimization, embedded inference, and computer vision</strong>."
+            data-fr="Avec une expérience pratique en <strong>diagnostic médical, robotique sous-marine, technologies d'accessibilité et analyse sportive</strong>, j'apporte une vision systémique à chaque projet. Je suis passionné par l'intersection entre <strong>optimisation de modèles, inférence embarquée et vision par ordinateur</strong>.">
             With hands-on experience spanning <strong>healthcare diagnostics, underwater robotics, accessibility tech,
               and sports analytics</strong>,
             I bring a systems-level perspective to every project. I'm passionate about the intersection of
             <strong>model optimization, embedded inference, and computer vision</strong>.
           </p>
           <br />
-          <p>
+          <p data-en="Currently pursuing graduate studies in <strong>Embedded AI</strong>, and actively seeking opportunities to push the boundaries of edge intelligence."
+            data-fr="Je poursuis actuellement des études supérieures en <strong>IA embarquée</strong>, et je recherche activement des opportunités pour repousser les limites de l'intelligence embarquée.">
             Currently pursuing graduate studies in <strong>Embedded AI</strong>, and actively seeking
             opportunities
             to push the boundaries of edge intelligence.
@@ -128,19 +137,19 @@
         <div class="stats-grid stagger-children">
           <div class="stat-card glass reveal-el">
             <div class="stat-number" data-target="14">0</div>
-            <div class="stat-label">Projects Built</div>
+            <div class="stat-label" data-en="Projects Built" data-fr="Projets réalisés">Projects Built</div>
           </div>
           <div class="stat-card glass reveal-el">
             <div class="stat-number" data-target="6">0</div>
-            <div class="stat-label">AI Domains</div>
+            <div class="stat-label" data-en="AI Domains" data-fr="Domaines IA">AI Domains</div>
           </div>
           <div class="stat-card glass reveal-el">
             <div class="stat-number" data-target="5">0</div>
-            <div class="stat-label">DL Frameworks</div>
+            <div class="stat-label" data-en="DL Frameworks" data-fr="Frameworks DL">DL Frameworks</div>
           </div>
           <div class="stat-card glass reveal-el">
             <div class="stat-number" data-target="3">0</div>
-            <div class="stat-label">Edge Deployments</div>
+            <div class="stat-label" data-en="Edge Deployments" data-fr="Déploiements embarqués">Edge Deployments</div>
           </div>
         </div>
       </div>
@@ -150,22 +159,26 @@
   <!-- Skills -->
   <section class="section" id="skills">
     <div class="container">
-      <h2 class="section-title reveal-el">Core Skills</h2>
-      <p class="section-subtitle reveal-el">Technologies and frameworks I use to build intelligent systems.</p>
+      <h2 class="section-title reveal-el" data-en="Core Skills" data-fr="Compétences clés">Core Skills</h2>
+      <p class="section-subtitle reveal-el" data-en="Technologies and frameworks I use to build intelligent systems."
+        data-fr="Technologies et frameworks que j'utilise pour construire des systèmes intelligents.">Technologies and
+        frameworks I use to build intelligent systems.</p>
       <div class="skills-grid stagger-children">
         <div class="skill-card glass reveal-el">
           <div class="skill-card-header">
             <div class="skill-icon cv">👁️</div>
-            <h3>Computer Vision</h3>
+            <h3 data-en="Computer Vision" data-fr="Vision par ordinateur">Computer Vision</h3>
           </div>
           <div class="skill-tags">
             <span class="skill-tag">OpenCV</span><span class="skill-tag">YOLOv5</span><span
               class="skill-tag">YOLOv8</span>
-            <span class="skill-tag">Object Detection</span><span class="skill-tag">Tracking</span><span
-              class="skill-tag">Image Processing</span>
+            <span class="skill-tag" data-en="Object Detection" data-fr="Détection d'objets">Object Detection</span><span
+              class="skill-tag" data-en="Tracking" data-fr="Suivi">Tracking</span><span class="skill-tag"
+              data-en="Image Processing" data-fr="Traitement d'image">Image Processing</span>
           </div>
           <div class="skill-bar-wrap">
-            <div class="skill-bar-item"><span class="label">Proficiency</span>
+            <div class="skill-bar-item"><span class="label" data-en="Proficiency"
+                data-fr="Compétence">Proficiency</span>
               <div class="skill-bar-track">
                 <div class="skill-bar-fill fill-cyan" data-level="92"></div>
               </div>
@@ -175,16 +188,18 @@
         <div class="skill-card glass reveal-el">
           <div class="skill-card-header">
             <div class="skill-icon dl">🧠</div>
-            <h3>Deep Learning</h3>
+            <h3 data-en="Deep Learning" data-fr="Apprentissage profond">Deep Learning</h3>
           </div>
           <div class="skill-tags">
             <span class="skill-tag">PyTorch</span><span class="skill-tag">TensorFlow</span><span
               class="skill-tag">CNNs</span>
-            <span class="skill-tag">Transfer Learning</span><span class="skill-tag">U-Net</span><span
-              class="skill-tag">Model Optimization</span>
+            <span class="skill-tag" data-en="Transfer Learning" data-fr="Apprentissage par transfert">Transfer
+              Learning</span><span class="skill-tag">U-Net</span><span class="skill-tag" data-en="Model Optimization"
+              data-fr="Optimisation de modèles">Model Optimization</span>
           </div>
           <div class="skill-bar-wrap">
-            <div class="skill-bar-item"><span class="label">Proficiency</span>
+            <div class="skill-bar-item"><span class="label" data-en="Proficiency"
+                data-fr="Compétence">Proficiency</span>
               <div class="skill-bar-track">
                 <div class="skill-bar-fill fill-violet" data-level="90"></div>
               </div>
@@ -194,15 +209,18 @@
         <div class="skill-card glass reveal-el">
           <div class="skill-card-header">
             <div class="skill-icon edge">⚡</div>
-            <h3>Edge AI & Deployment</h3>
+            <h3 data-en="Edge AI & Deployment" data-fr="IA embarquée & déploiement">Edge AI & Deployment</h3>
           </div>
           <div class="skill-tags">
             <span class="skill-tag">TensorFlow Lite</span><span class="skill-tag">TF.js</span><span
               class="skill-tag">ONNX</span>
-            <span class="skill-tag">Model Quantization</span><span class="skill-tag">Real-Time Inference</span>
+            <span class="skill-tag" data-en="Model Quantization" data-fr="Quantification de modèles">Model
+              Quantization</span><span class="skill-tag" data-en="Real-Time Inference"
+              data-fr="Inférence temps réel">Real-Time Inference</span>
           </div>
           <div class="skill-bar-wrap">
-            <div class="skill-bar-item"><span class="label">Proficiency</span>
+            <div class="skill-bar-item"><span class="label" data-en="Proficiency"
+                data-fr="Compétence">Proficiency</span>
               <div class="skill-bar-track">
                 <div class="skill-bar-fill fill-emerald" data-level="88"></div>
               </div>
@@ -212,14 +230,17 @@
         <div class="skill-card glass reveal-el">
           <div class="skill-card-header">
             <div class="skill-icon rl">🎮</div>
-            <h3>Reinforcement Learning</h3>
+            <h3 data-en="Reinforcement Learning" data-fr="Apprentissage par renforcement">Reinforcement Learning</h3>
           </div>
           <div class="skill-tags">
-            <span class="skill-tag">OpenAI Gym</span><span class="skill-tag">Policy Learning</span>
-            <span class="skill-tag">Reward Shaping</span><span class="skill-tag">Simulation</span>
+            <span class="skill-tag">OpenAI Gym</span><span class="skill-tag" data-en="Policy Learning"
+              data-fr="Apprentissage de politiques">Policy Learning</span>
+            <span class="skill-tag" data-en="Reward Shaping" data-fr="Façonnage de récompense">Reward
+              Shaping</span><span class="skill-tag" data-en="Simulation" data-fr="Simulation">Simulation</span>
           </div>
           <div class="skill-bar-wrap">
-            <div class="skill-bar-item"><span class="label">Proficiency</span>
+            <div class="skill-bar-item"><span class="label" data-en="Proficiency"
+                data-fr="Compétence">Proficiency</span>
               <div class="skill-bar-track">
                 <div class="skill-bar-fill fill-amber" data-level="78"></div>
               </div>
@@ -229,15 +250,18 @@
         <div class="skill-card glass reveal-el">
           <div class="skill-card-header">
             <div class="skill-icon nlp">💬</div>
-            <h3>Audio & NLP</h3>
+            <h3 data-en="Audio & NLP" data-fr="Audio & TAL">Audio & NLP</h3>
           </div>
           <div class="skill-tags">
-            <span class="skill-tag">MFCC</span><span class="skill-tag">Audio Processing</span><span
-              class="skill-tag">Sentiment Analysis</span>
-            <span class="skill-tag">LLM Fine-Tuning</span><span class="skill-tag">Low-Resource NLP</span>
+            <span class="skill-tag">MFCC</span><span class="skill-tag" data-en="Audio Processing"
+              data-fr="Traitement audio">Audio Processing</span><span class="skill-tag" data-en="Sentiment Analysis"
+              data-fr="Analyse de sentiment">Sentiment Analysis</span>
+            <span class="skill-tag" data-en="LLM Fine-Tuning" data-fr="Affinage de LLM">LLM Fine-Tuning</span><span
+              class="skill-tag" data-en="Low-Resource NLP" data-fr="TAL à faibles ressources">Low-Resource NLP</span>
           </div>
           <div class="skill-bar-wrap">
-            <div class="skill-bar-item"><span class="label">Proficiency</span>
+            <div class="skill-bar-item"><span class="label" data-en="Proficiency"
+                data-fr="Compétence">Proficiency</span>
               <div class="skill-bar-track">
                 <div class="skill-bar-fill fill-rose" data-level="82"></div>
               </div>
@@ -247,7 +271,7 @@
         <div class="skill-card glass reveal-el">
           <div class="skill-card-header">
             <div class="skill-icon sw">🛠️</div>
-            <h3>Software & Data</h3>
+            <h3 data-en="Software & Data" data-fr="Logiciel & données">Software & Data</h3>
           </div>
           <div class="skill-tags">
             <span class="skill-tag">Python</span><span class="skill-tag">Java</span><span class="skill-tag">REST
@@ -256,7 +280,8 @@
               class="skill-tag">NumPy</span><span class="skill-tag">Git</span>
           </div>
           <div class="skill-bar-wrap">
-            <div class="skill-bar-item"><span class="label">Proficiency</span>
+            <div class="skill-bar-item"><span class="label" data-en="Proficiency"
+                data-fr="Compétence">Proficiency</span>
               <div class="skill-bar-track">
                 <div class="skill-bar-fill fill-cyan" data-level="85"></div>
               </div>
@@ -270,79 +295,123 @@
   <!-- Projects -->
   <section class="section" id="projects">
     <div class="container">
-      <h2 class="section-title reveal-el">Featured Projects</h2>
-      <p class="section-subtitle reveal-el">Real-world AI systems I've designed, built, and deployed.</p>
+      <h2 class="section-title reveal-el" data-en="Featured Projects" data-fr="Projets phares">Featured Projects</h2>
+      <p class="section-subtitle reveal-el" data-en="Real-world AI systems I've designed, built, and deployed."
+        data-fr="Des systèmes d'IA concrets que j'ai conçus, construits et déployés.">Real-world AI systems I've
+        designed, built, and deployed.</p>
       <div class="filter-bar reveal-el">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="edge">Edge AI</button>
-        <button class="filter-btn" data-filter="cv">Computer Vision</button>
-        <button class="filter-btn" data-filter="health">Healthcare</button>
-        <button class="filter-btn" data-filter="nlp">NLP</button>
-        <button class="filter-btn" data-filter="sw">Software</button>
+        <button class="filter-btn active" data-filter="all"><span class="label" data-en="All"
+            data-fr="Tous">All</span></button>
+        <button class="filter-btn" data-filter="edge"><span class="label" data-en="Edge AI" data-fr="IA
+            embarquée">Edge AI</span></button>
+        <button class="filter-btn" data-filter="cv"><span class="label" data-en="Computer Vision" data-fr="Vision
+            par ordinateur">Computer Vision</span></button>
+        <button class="filter-btn" data-filter="health"><span class="label" data-en="Healthcare" data-fr="Santé">Healthcare</span></button>
+        <button class="filter-btn" data-filter="nlp"><span class="label" data-en="NLP" data-fr="TAL">NLP</span></button>
+        <button class="filter-btn" data-filter="sw"><span class="label" data-en="Software"
+            data-fr="Logiciel">Software</span></button>
       </div>
       <div class="project-grid stagger-children">
 
         <div class="project-card glass reveal-el" data-domain="cv" data-title="Underwater Object Detection & Tracking"
-          data-desc="YOLOv8-based real-time underwater perception system optimized for low-visibility marine environments. Custom-trained on underwater datasets with augmentation for turbidity, color distortion, and motion blur. Integrated with OpenCV for multi-object tracking. Designed for AUV perception pipelines.">
-          <h3>Underwater Object Detection & Tracking</h3>
-          <p class="desc">Real-time YOLOv8 + OpenCV system for underwater environments.</p>
+          data-desc="YOLOv8-based real-time underwater perception system optimized for low-visibility marine environments. Custom-trained on underwater datasets with augmentation for turbidity, color distortion, and motion blur. Integrated with OpenCV for multi-object tracking. Designed for AUV perception pipelines."
+          data-title-fr="Détection et suivi d'objets sous-marins"
+          data-desc-fr="Système de perception sous-marine en temps réel basé sur YOLOv8, optimisé pour les environnements marins à faible visibilité. Entraîné spécifiquement sur des jeux de données sous-marines avec augmentation pour la turbidité, la distorsion des couleurs et le flou de mouvement. Intégré à OpenCV pour le suivi multi-objets. Conçu pour les pipelines de perception d'AUV.">
+          <h3 data-en="Underwater Object Detection & Tracking" data-fr="Détection et suivi d'objets sous-marins">
+            Underwater Object Detection & Tracking</h3>
+          <p class="desc" data-en="Real-time YOLOv8 + OpenCV system for underwater environments."
+            data-fr="Système YOLOv8 + OpenCV en temps réel pour environnements sous-marins.">Real-time YOLOv8 + OpenCV
+            system for underwater environments.</p>
           <div class="project-tech"><span class="tech-pill">YOLOv8</span><span class="tech-pill">OpenCV</span><span
               class="tech-pill">Python</span></div>
         </div>
 
         <div class="project-card glass reveal-el" data-domain="edge" data-title="Underwater Edge AI Pipeline"
-          data-desc="End-to-end Edge AI pipeline for real-time underwater object detection on NVIDIA Jetson. Merges RUOD, TrashCan 1.0, and CADDY datasets into a unified three-class system (fish, debris, divers). Features CLAHE image enhancement, YOLOv8m fine-tuning, structured pruning, quantization-aware training, ONNX export, and TensorRT engine conversion targeting 20+ FPS on edge hardware.">
-          <h3>Underwater Edge AI Pipeline</h3>
-          <p class="desc">NVIDIA Jetson deployment with YOLOv8m + TensorRT at 20+ FPS.</p>
+          data-desc="End-to-end Edge AI pipeline for real-time underwater object detection on NVIDIA Jetson. Merges RUOD, TrashCan 1.0, and CADDY datasets into a unified three-class system (fish, debris, divers). Features CLAHE image enhancement, YOLOv8m fine-tuning, structured pruning, quantization-aware training, ONNX export, and TensorRT engine conversion targeting 20+ FPS on edge hardware."
+          data-title-fr="Pipeline d'IA embarquée sous-marine"
+          data-desc-fr="Pipeline d'IA embarquée de bout en bout pour la détection d'objets sous-marins en temps réel sur NVIDIA Jetson. Fusionne les jeux de données RUOD, TrashCan 1.0 et CADDY en un système unifié à trois classes (poissons, débris, plongeurs). Comprend l'amélioration d'image CLAHE, l'affinage de YOLOv8m, l'élagage structuré, l'entraînement conscient de la quantification, l'export ONNX et la conversion en moteur TensorRT visant plus de 20 FPS sur matériel embarqué.">
+          <h3 data-en="Underwater Edge AI Pipeline" data-fr="Pipeline d'IA embarquée sous-marine">Underwater Edge AI
+            Pipeline</h3>
+          <p class="desc" data-en="NVIDIA Jetson deployment with YOLOv8m + TensorRT at 20+ FPS."
+            data-fr="Déploiement NVIDIA Jetson avec YOLOv8m + TensorRT à plus de 20 FPS.">NVIDIA Jetson deployment with
+            YOLOv8m + TensorRT at 20+ FPS.</p>
           <div class="project-tech"><span class="tech-pill">YOLOv8</span><span class="tech-pill">TensorRT</span><span
               class="tech-pill">Jetson</span><span class="tech-pill">ONNX</span></div>
         </div>
 
         <div class="project-card glass reveal-el" data-domain="health" data-title="Heart Attack Risk Prediction"
-          data-desc="Hybrid AI framework for cardiovascular risk stratification using retinal fundus images. U-Net segmentation for vessel extraction, morphological biomarker computation, and XGBoost classification. Fully explainable with SHAP values.">
-          <h3>Heart Attack Risk Prediction</h3>
-          <p class="desc">Retinal image analysis for cardiovascular risk using U-Net + XGBoost.</p>
+          data-desc="Hybrid AI framework for cardiovascular risk stratification using retinal fundus images. U-Net segmentation for vessel extraction, morphological biomarker computation, and XGBoost classification. Fully explainable with SHAP values."
+          data-title-fr="Prédiction du risque d'infarctus"
+          data-desc-fr="Cadre d'IA hybride pour la stratification du risque cardiovasculaire à partir d'images du fond d'œil. Segmentation U-Net pour l'extraction des vaisseaux, calcul de biomarqueurs morphologiques et classification XGBoost. Entièrement explicable grâce aux valeurs SHAP.">
+          <h3 data-en="Heart Attack Risk Prediction" data-fr="Prédiction du risque d'infarctus">Heart Attack Risk
+            Prediction</h3>
+          <p class="desc" data-en="Retinal image analysis for cardiovascular risk using U-Net + XGBoost."
+            data-fr="Analyse d'images rétiniennes pour le risque cardiovasculaire via U-Net + XGBoost.">Retinal image
+            analysis for cardiovascular risk using U-Net + XGBoost.</p>
           <div class="project-tech"><span class="tech-pill">U-Net</span><span class="tech-pill">XGBoost</span><span
               class="tech-pill">SHAP</span></div>
         </div>
 
         <div class="project-card glass reveal-el" data-domain="edge health"
           data-title="Respiratory Sound Disease (Edge AI)"
-          data-desc="MFCC-based respiratory audio classification deployed as an Edge AI system. Lightweight CNN trained on lung sounds, deployed via TensorFlow Lite for on-device inference in resource-constrained clinical settings.">
-          <h3>Respiratory Sound Disease (Edge AI)</h3>
-          <p class="desc">Audio-based disease classification with Edge AI via TFLite.</p>
+          data-desc="MFCC-based respiratory audio classification deployed as an Edge AI system. Lightweight CNN trained on lung sounds, deployed via TensorFlow Lite for on-device inference in resource-constrained clinical settings."
+          data-title-fr="Diagnostic respiratoire (IA embarquée)"
+          data-desc-fr="Classification audio respiratoire basée sur les MFCC déployée en tant que système d'IA embarquée. CNN léger entraîné sur des sons pulmonaires, déployé via TensorFlow Lite pour une inférence sur site dans des environnements cliniques aux ressources limitées.">
+          <h3 data-en="Respiratory Sound Disease (Edge AI)" data-fr="Diagnostic respiratoire (IA embarquée)">
+            Respiratory Sound Disease (Edge AI)</h3>
+          <p class="desc" data-en="Audio-based disease classification with Edge AI via TFLite."
+            data-fr="Classification de maladies par audio avec IA embarquée via TFLite.">Audio-based disease
+            classification with Edge AI via TFLite.</p>
           <div class="project-tech"><span class="tech-pill">MFCC</span><span class="tech-pill">TFLite</span><span
               class="tech-pill">Edge AI</span></div>
         </div>
 
         <div class="project-card glass reveal-el" data-domain="cv" data-title="Sign Language to English Conversion"
-          data-desc="YOLOv5-based real-time sign language gesture detection and translation for accessibility. Custom-trained on ASL dataset with real-time English text output.">
-          <h3>Sign Language to English</h3>
-          <p class="desc">YOLOv5-based real-time gesture detection & translation.</p>
+          data-desc="YOLOv5-based real-time sign language gesture detection and translation for accessibility. Custom-trained on ASL dataset with real-time English text output."
+          data-title-fr="Traduction de la langue des signes"
+          data-desc-fr="Détection et traduction en temps réel des gestes de la langue des signes basée sur YOLOv5, pour l'accessibilité. Entraîné spécifiquement sur le jeu de données ASL avec sortie de texte anglais en temps réel.">
+          <h3 data-en="Sign Language to English" data-fr="Traduction de la langue des signes">Sign Language to English
+          </h3>
+          <p class="desc" data-en="YOLOv5-based real-time gesture detection & translation."
+            data-fr="Détection et traduction de gestes en temps réel basées sur YOLOv5.">YOLOv5-based real-time gesture
+            detection & translation.</p>
           <div class="project-tech"><span class="tech-pill">YOLOv5</span><span class="tech-pill">OpenCV</span><span
               class="tech-pill">Python</span></div>
         </div>
 
         <div class="project-card glass reveal-el" data-domain="sw" data-title="Reinforcement Learning Control"
-          data-desc="RL agent trained in OpenAI Gym to learn optimal control policies. Implemented policy gradient and Q-learning with custom reward shaping for autonomous navigation.">
-          <h3>RL Control System</h3>
-          <p class="desc">RL-based autonomous control with policy learning in simulation.</p>
+          data-desc="RL agent trained in OpenAI Gym to learn optimal control policies. Implemented policy gradient and Q-learning with custom reward shaping for autonomous navigation."
+          data-title-fr="Contrôle par apprentissage par renforcement"
+          data-desc-fr="Agent RL entraîné dans OpenAI Gym pour apprendre des politiques de contrôle optimales. Gradient de politique et Q-learning implémentés avec un façonnage de récompense personnalisé pour la navigation autonome.">
+          <h3 data-en="RL Control System" data-fr="Contrôle par apprentissage par renforcement">RL Control System</h3>
+          <p class="desc" data-en="RL-based autonomous control with policy learning in simulation."
+            data-fr="Contrôle autonome basé sur le RL avec apprentissage de politiques en simulation.">RL-based
+            autonomous control with policy learning in simulation.</p>
           <div class="project-tech"><span class="tech-pill">OpenAI Gym</span><span class="tech-pill">PyTorch</span><span
               class="tech-pill">RL</span></div>
         </div>
 
         <div class="project-card glass reveal-el" data-domain="cv" data-title="Cricket Ball Tracking"
-          data-desc="High-speed cricket ball detection and tracking using YOLOv4 and OpenCV. Trajectory, speed estimation, and bounce prediction for sports broadcast analytics.">
-          <h3>Cricket Ball Tracking</h3>
-          <p class="desc">High-speed sports analytics with YOLOv4 trajectory tracking.</p>
+          data-desc="High-speed cricket ball detection and tracking using YOLOv4 and OpenCV. Trajectory, speed estimation, and bounce prediction for sports broadcast analytics."
+          data-title-fr="Suivi de balle de cricket"
+          data-desc-fr="Détection et suivi haute vitesse de la balle de cricket avec YOLOv4 et OpenCV. Trajectoire, estimation de vitesse et prédiction de rebond pour l'analyse sportive en diffusion.">
+          <h3 data-en="Cricket Ball Tracking" data-fr="Suivi de balle de cricket">Cricket Ball Tracking</h3>
+          <p class="desc" data-en="High-speed sports analytics with YOLOv4 trajectory tracking."
+            data-fr="Analyse sportive haute vitesse avec suivi de trajectoire YOLOv4.">High-speed sports analytics
+            with YOLOv4 trajectory tracking.</p>
           <div class="project-tech"><span class="tech-pill">YOLOv4</span><span class="tech-pill">OpenCV</span><span
               class="tech-pill">Analytics</span></div>
         </div>
 
         <div class="project-card glass reveal-el" data-domain="edge" data-title="AI Traffic Prediction (Edge)"
-          data-desc="PyTorch traffic prediction model trained on Chennai road data with city-specific patterns. Exported to TensorFlow.js for real-time browser inference. Full pipeline from OSM data to edge deployment.">
-          <h3>AI Traffic Prediction (Edge)</h3>
-          <p class="desc">PyTorch traffic model deployed to browser via TF.js.</p>
+          data-desc="PyTorch traffic prediction model trained on Chennai road data with city-specific patterns. Exported to TensorFlow.js for real-time browser inference. Full pipeline from OSM data to edge deployment."
+          data-title-fr="Prédiction du trafic par IA (embarquée)"
+          data-desc-fr="Modèle PyTorch de prédiction du trafic entraîné sur des données routières de Chennai avec des motifs spécifiques à la ville. Exporté vers TensorFlow.js pour une inférence en temps réel dans le navigateur. Pipeline complet, des données OSM au déploiement embarqué.">
+          <h3 data-en="AI Traffic Prediction (Edge)" data-fr="Prédiction du trafic par IA (embarquée)">AI Traffic
+            Prediction (Edge)</h3>
+          <p class="desc" data-en="PyTorch traffic model deployed to browser via TF.js."
+            data-fr="Modèle de trafic PyTorch déployé dans le navigateur via TF.js.">PyTorch traffic model deployed to
+            browser via TF.js.</p>
           <div class="project-tech"><span class="tech-pill">PyTorch</span><span class="tech-pill">TF.js</span><span
               class="tech-pill">Edge AI</span></div>
         </div>
@@ -350,49 +419,77 @@
 
 
         <div class="project-card glass reveal-el" data-domain="nlp" data-title="E-Commerce Sentiment Analysis"
-          data-desc="NLP sentiment analysis on large-scale Flipkart & Amazon reviews using TF-IDF and classifier ensembles.">
-          <h3>E-Commerce Sentiment Analysis</h3>
-          <p class="desc">NLP sentiment analysis on product reviews at scale.</p>
+          data-desc="NLP sentiment analysis on large-scale Flipkart & Amazon reviews using TF-IDF and classifier ensembles."
+          data-title-fr="Analyse de sentiment e-commerce"
+          data-desc-fr="Analyse de sentiment par TAL sur des avis Flipkart et Amazon à grande échelle, utilisant TF-IDF et des ensembles de classificateurs.">
+          <h3 data-en="E-Commerce Sentiment Analysis" data-fr="Analyse de sentiment e-commerce">E-Commerce Sentiment
+            Analysis</h3>
+          <p class="desc" data-en="NLP sentiment analysis on product reviews at scale."
+            data-fr="Analyse de sentiment TAL sur des avis produits à grande échelle.">NLP sentiment analysis on
+            product reviews at scale.</p>
           <div class="project-tech"><span class="tech-pill">NLP</span><span class="tech-pill">TF-IDF</span><span
               class="tech-pill">Python</span></div>
         </div>
 
         <div class="project-card glass reveal-el" data-domain="nlp" data-title="Tamil LLM Text Simplification"
-          data-desc="Low-resource Tamil NLP for sentence simplification using IndicBART fine-tuning on curated Tamil corpora. Targeted text simplification for accessibility in underrepresented languages.">
-          <h3>Tamil LLM Text Simplification</h3>
-          <p class="desc">Low-resource Tamil NLP with IndicBART fine-tuning.</p>
+          data-desc="Low-resource Tamil NLP for sentence simplification using IndicBART fine-tuning on curated Tamil corpora. Targeted text simplification for accessibility in underrepresented languages."
+          data-title-fr="Simplification de texte tamoul par LLM"
+          data-desc-fr="TAL tamoul à faibles ressources pour la simplification de phrases via l'affinage d'IndicBART sur des corpus tamouls sélectionnés. Simplification de texte ciblée pour l'accessibilité dans les langues sous-représentées.">
+          <h3 data-en="Tamil LLM Text Simplification" data-fr="Simplification de texte tamoul par LLM">Tamil LLM Text
+            Simplification</h3>
+          <p class="desc" data-en="Low-resource Tamil NLP with IndicBART fine-tuning."
+            data-fr="TAL tamoul à faibles ressources avec affinage d'IndicBART.">Low-resource Tamil NLP with IndicBART
+            fine-tuning.</p>
           <div class="project-tech"><span class="tech-pill">IndicBART</span><span class="tech-pill">NLP</span><span
               class="tech-pill">Fine-Tuning</span></div>
         </div>
 
         <div class="project-card glass reveal-el" data-domain="sw" data-title="Book Metadata Automation"
-          data-desc="Python GUI tool for Excel enrichment using ISBN lookups via Google Books and Open Library APIs.">
-          <h3>Book Metadata Automation</h3>
-          <p class="desc">ISBN-based Excel enrichment via REST APIs.</p>
+          data-desc="Python GUI tool for Excel enrichment using ISBN lookups via Google Books and Open Library APIs."
+          data-title-fr="Automatisation des métadonnées de livres"
+          data-desc-fr="Outil GUI Python pour l'enrichissement de fichiers Excel via des recherches ISBN utilisant les API Google Books et Open Library.">
+          <h3 data-en="Book Metadata Automation" data-fr="Automatisation des métadonnées de livres">Book Metadata
+            Automation</h3>
+          <p class="desc" data-en="ISBN-based Excel enrichment via REST APIs."
+            data-fr="Enrichissement Excel basé sur l'ISBN via des API REST.">ISBN-based Excel enrichment via REST
+            APIs.</p>
           <div class="project-tech"><span class="tech-pill">Python</span><span class="tech-pill">REST APIs</span><span
               class="tech-pill">GUI</span></div>
         </div>
 
         <div class="project-card glass reveal-el" data-domain="sw" data-title="EV Popularity Forecasting"
-          data-desc="Time-series forecasting using AutoTS and Google Trends to predict EV adoption patterns.">
-          <h3>EV Popularity Forecasting</h3>
-          <p class="desc">Time-series forecasting of EV trends.</p>
+          data-desc="Time-series forecasting using AutoTS and Google Trends to predict EV adoption patterns."
+          data-title-fr="Prévision de popularité des véhicules électriques"
+          data-desc-fr="Prévision de séries temporelles utilisant AutoTS et Google Trends pour prédire les tendances d'adoption des véhicules électriques.">
+          <h3 data-en="EV Popularity Forecasting" data-fr="Prévision de popularité des véhicules électriques">EV
+            Popularity Forecasting</h3>
+          <p class="desc" data-en="Time-series forecasting of EV trends."
+            data-fr="Prévision de séries temporelles des tendances VE.">Time-series forecasting of EV trends.</p>
           <div class="project-tech"><span class="tech-pill">AutoTS</span><span class="tech-pill">Python</span><span
               class="tech-pill">Forecasting</span></div>
         </div>
 
         <div class="project-card glass reveal-el" data-domain="sw" data-title="Movie Recommendation App"
-          data-desc="Full-stack React + MongoDB personalized movie recommendation system with collaborative filtering and TMDB API integration.">
-          <h3>Movie Recommendation App</h3>
-          <p class="desc">Full-stack React + MongoDB recommendation system.</p>
+          data-desc="Full-stack React + MongoDB personalized movie recommendation system with collaborative filtering and TMDB API integration."
+          data-title-fr="Application de recommandation de films"
+          data-desc-fr="Système de recommandation de films personnalisé full-stack en React + MongoDB, avec filtrage collaboratif et intégration de l'API TMDB.">
+          <h3 data-en="Movie Recommendation App" data-fr="Application de recommandation de films">Movie
+            Recommendation App</h3>
+          <p class="desc" data-en="Full-stack React + MongoDB recommendation system."
+            data-fr="Système de recommandation full-stack en React + MongoDB.">Full-stack React + MongoDB
+            recommendation system.</p>
           <div class="project-tech"><span class="tech-pill">React</span><span class="tech-pill">MongoDB</span><span
               class="tech-pill">REST APIs</span></div>
         </div>
 
         <div class="project-card glass reveal-el" data-domain="sw" data-title="Java Music Player"
-          data-desc="Desktop-based music player application built with Java Swing. Features smooth audio playback, GUI controls, playlist management, and a modern interface.">
-          <h3>Java Music Player</h3>
-          <p class="desc">Desktop music player with GUI controls and smooth playback.</p>
+          data-desc="Desktop-based music player application built with Java Swing. Features smooth audio playback, GUI controls, playlist management, and a modern interface."
+          data-title-fr="Lecteur de musique Java"
+          data-desc-fr="Application de lecteur de musique de bureau construite avec Java Swing. Lecture audio fluide, contrôles GUI, gestion de playlists et interface moderne.">
+          <h3 data-en="Java Music Player" data-fr="Lecteur de musique Java">Java Music Player</h3>
+          <p class="desc" data-en="Desktop music player with GUI controls and smooth playback."
+            data-fr="Lecteur de musique de bureau avec contrôles GUI et lecture fluide.">Desktop music player with GUI
+            controls and smooth playback.</p>
           <div class="project-tech"><span class="tech-pill">Java</span><span class="tech-pill">Swing</span><span
               class="tech-pill">GUI</span></div>
         </div>
@@ -404,23 +501,32 @@
   <!-- Experience -->
   <section class="section" id="experience">
     <div class="container">
-      <h2 class="section-title reveal-el">Experience & Education</h2>
-      <p class="section-subtitle reveal-el">From embedded inference to grad school — building Edge AI in the real world.
+      <h2 class="section-title reveal-el" data-en="Experience & Education" data-fr="Expérience & formation">Experience
+        & Education</h2>
+      <p class="section-subtitle reveal-el"
+        data-en="From embedded inference to grad school — building Edge AI in the real world."
+        data-fr="De l'inférence embarquée aux études supérieures — construire l'IA embarquée dans le monde réel.">
+        From embedded inference to grad school — building Edge AI in the real world.
       </p>
       <div class="timeline">
 
         <div class="timeline-item reveal-el">
           <div class="timeline-dot"></div>
           <div class="timeline-header">
-            <span class="timeline-badge badge-intern">Internship</span>
-            <div class="timeline-date">Feb 2025 — Present</div>
+            <span class="timeline-badge badge-intern" data-en="Internship" data-fr="Stage">Internship</span>
+            <div class="timeline-date" data-en="Feb 2025 — Present" data-fr="Fév. 2025 — Présent">Feb 2025 — Present
+            </div>
           </div>
-          <h3>Student Intern — Edge AI</h3>
+          <h3 data-en="Student Intern — Edge AI" data-fr="Stagiaire — IA embarquée">Student Intern — Edge AI</h3>
           <div class="org"><span class="org-icon">🏫</span> Sri Ramachandra Institute of Higher Education and Research ·
             Chennai</div>
-          <p>Developing an end-to-end Edge AI pipeline for real-time underwater object detection on NVIDIA Jetson.</p>
+          <p data-en="Developing an end-to-end Edge AI pipeline for real-time underwater object detection on NVIDIA Jetson."
+            data-fr="Développement d'un pipeline d'IA embarquée de bout en bout pour la détection d'objets sous-marins en temps réel sur NVIDIA Jetson.">
+            Developing an end-to-end Edge AI pipeline for real-time underwater object detection on NVIDIA Jetson.</p>
           <div class="timeline-details">
-            <p>Merging RUOD, TrashCan 1.0, and CADDY datasets into a unified three-class detection system (fish, marine
+            <p data-en="Merging RUOD, TrashCan 1.0, and CADDY datasets into a unified three-class detection system (fish, marine debris, divers). Implementing CLAHE-based image enhancement, YOLOv8m fine-tuning with structured pruning, quantization-aware training, and TensorRT export targeting 20+ FPS on edge hardware."
+              data-fr="Fusion des jeux de données RUOD, TrashCan 1.0 et CADDY en un système de détection unifié à trois classes (poissons, débris marins, plongeurs). Mise en œuvre de l'amélioration d'image CLAHE, de l'affinage de YOLOv8m avec élagage structuré, de l'entraînement conscient de la quantification et de l'export TensorRT visant plus de 20 FPS sur matériel embarqué.">
+              Merging RUOD, TrashCan 1.0, and CADDY datasets into a unified three-class detection system (fish, marine
               debris, divers). Implementing CLAHE-based image enhancement, YOLOv8m fine-tuning with structured pruning,
               quantization-aware training, and TensorRT export targeting 20+ FPS on edge hardware.</p>
           </div>
@@ -428,21 +534,27 @@
             <span class="tech-pill">YOLOv8</span><span class="tech-pill">TensorRT</span><span
               class="tech-pill">Jetson</span><span class="tech-pill">ONNX</span><span class="tech-pill">CLAHE</span>
           </div>
-          <div class="timeline-expand-hint"><span class="arrow">▼</span> Click to expand</div>
+          <div class="timeline-expand-hint"><span class="arrow">▼</span> <span data-en="Click to expand"
+              data-fr="Cliquer pour agrandir">Click to expand</span></div>
         </div>
 
         <div class="timeline-item reveal-el">
           <div class="timeline-dot"></div>
           <div class="timeline-header">
-            <span class="timeline-badge badge-intern">Internship</span>
-            <div class="timeline-date">Aug 2024 — Oct 2024</div>
+            <span class="timeline-badge badge-intern" data-en="Internship" data-fr="Stage">Internship</span>
+            <div class="timeline-date" data-en="Aug 2024 — Oct 2024" data-fr="Août 2024 — Oct. 2024">Aug 2024 — Oct
+              2024</div>
           </div>
-          <h3>Student Intern — AI/ML</h3>
+          <h3 data-en="Student Intern — AI/ML" data-fr="Stagiaire — IA/ML">Student Intern — AI/ML</h3>
           <div class="org"><span class="org-icon">🏫</span> Sri Ramachandra Institute of Higher Education and Research ·
             Chennai</div>
-          <p>Built a heart attack risk prediction system using retinal fundus image analysis.</p>
+          <p data-en="Built a heart attack risk prediction system using retinal fundus image analysis."
+            data-fr="Développement d'un système de prédiction du risque d'infarctus par analyse d'images du fond d'œil.">
+            Built a heart attack risk prediction system using retinal fundus image analysis.</p>
           <div class="timeline-details">
-            <p>Developed U-Net segmentation for vessel extraction and XGBoost classification with SHAP explainability
+            <p data-en="Developed U-Net segmentation for vessel extraction and XGBoost classification with SHAP explainability for cardiovascular risk stratification. Extracted morphological vascular biomarkers for clinical assessment."
+              data-fr="Développement d'une segmentation U-Net pour l'extraction des vaisseaux et d'une classification XGBoost avec explicabilité SHAP pour la stratification du risque cardiovasculaire. Extraction de biomarqueurs vasculaires morphologiques pour l'évaluation clinique.">
+              Developed U-Net segmentation for vessel extraction and XGBoost classification with SHAP explainability
               for cardiovascular risk stratification. Extracted morphological vascular biomarkers for clinical
               assessment.</p>
           </div>
@@ -450,90 +562,122 @@
             <span class="tech-pill">U-Net</span><span class="tech-pill">XGBoost</span><span
               class="tech-pill">SHAP</span><span class="tech-pill">OpenCV</span>
           </div>
-          <div class="timeline-expand-hint"><span class="arrow">▼</span> Click to expand</div>
+          <div class="timeline-expand-hint"><span class="arrow">▼</span> <span data-en="Click to expand"
+              data-fr="Cliquer pour agrandir">Click to expand</span></div>
         </div>
 
         <div class="timeline-item reveal-el">
           <div class="timeline-dot"></div>
           <div class="timeline-header">
-            <span class="timeline-badge badge-intern">Internship</span>
-            <div class="timeline-date">Feb 2024 — Apr 2024</div>
+            <span class="timeline-badge badge-intern" data-en="Internship" data-fr="Stage">Internship</span>
+            <div class="timeline-date" data-en="Feb 2024 — Apr 2024" data-fr="Fév. 2024 — Avr. 2024">Feb 2024 — Apr
+              2024</div>
           </div>
-          <h3>Student Intern — Computer Vision</h3>
+          <h3 data-en="Student Intern — Computer Vision" data-fr="Stagiaire — Vision par ordinateur">Student Intern —
+            Computer Vision</h3>
           <div class="org"><span class="org-icon">🏫</span> Sri Ramachandra Institute of Higher Education and Research ·
             Chennai</div>
-          <p>Developed a high-speed cricket ball tracking system for sports analytics.</p>
+          <p data-en="Developed a high-speed cricket ball tracking system for sports analytics."
+            data-fr="Développement d'un système de suivi haute vitesse de balle de cricket pour l'analyse sportive.">
+            Developed a high-speed cricket ball tracking system for sports analytics.</p>
           <div class="timeline-details">
-            <p>Built real-time object detection, trajectory prediction, and speed estimation using YOLOv5 and OpenCV.
+            <p data-en="Built real-time object detection, trajectory prediction, and speed estimation using YOLOv5 and OpenCV. Optimized for match-like video conditions with high-speed ball tracking."
+              data-fr="Détection d'objets en temps réel, prédiction de trajectoire et estimation de vitesse avec YOLOv5 et OpenCV. Optimisé pour des conditions vidéo proches d'un vrai match avec suivi de balle à haute vitesse.">
+              Built real-time object detection, trajectory prediction, and speed estimation using YOLOv5 and OpenCV.
               Optimized for match-like video conditions with high-speed ball tracking.</p>
           </div>
           <div class="timeline-tech">
             <span class="tech-pill">YOLOv5</span><span class="tech-pill">OpenCV</span><span
               class="tech-pill">Python</span>
           </div>
-          <div class="timeline-expand-hint"><span class="arrow">▼</span> Click to expand</div>
+          <div class="timeline-expand-hint"><span class="arrow">▼</span> <span data-en="Click to expand"
+              data-fr="Cliquer pour agrandir">Click to expand</span></div>
         </div>
 
         <div class="timeline-item reveal-el">
           <div class="timeline-dot"></div>
           <div class="timeline-header">
-            <span class="timeline-badge badge-intern">Internship</span>
-            <div class="timeline-date">May 2023 — Jul 2023</div>
+            <span class="timeline-badge badge-intern" data-en="Internship" data-fr="Stage">Internship</span>
+            <div class="timeline-date" data-en="May 2023 — Jul 2023" data-fr="Mai 2023 — Juil. 2023">May 2023 — Jul
+              2023</div>
           </div>
-          <h3>Student Intern — Full-Stack Development</h3>
+          <h3 data-en="Student Intern — Full-Stack Development" data-fr="Stagiaire — Développement full-stack">Student
+            Intern — Full-Stack Development</h3>
           <div class="org"><span class="org-icon">🏫</span> Sri Ramachandra Institute of Higher Education and Research ·
             Chennai</div>
-          <p>Built Moviepedia — a movie recommendation web application using ReactJS and TMDB API.</p>
+          <p data-en="Built Moviepedia — a movie recommendation web application using ReactJS and TMDB API."
+            data-fr="Développement de Moviepedia — une application web de recommandation de films utilisant ReactJS et l'API TMDB.">
+            Built Moviepedia — a movie recommendation web application using ReactJS and TMDB API.</p>
           <div class="timeline-details">
-            <p>Implemented collaborative filtering, responsive UI design, and REST API integration for personalized
+            <p data-en="Implemented collaborative filtering, responsive UI design, and REST API integration for personalized content delivery. Full-stack architecture with React frontend."
+              data-fr="Mise en œuvre du filtrage collaboratif, d'une interface responsive et de l'intégration d'API REST pour une diffusion de contenu personnalisée. Architecture full-stack avec un frontend React.">
+              Implemented collaborative filtering, responsive UI design, and REST API integration for personalized
               content delivery. Full-stack architecture with React frontend.</p>
           </div>
           <div class="timeline-tech">
             <span class="tech-pill">React</span><span class="tech-pill">TMDB API</span><span
               class="tech-pill">REST</span>
           </div>
-          <div class="timeline-expand-hint"><span class="arrow">▼</span> Click to expand</div>
+          <div class="timeline-expand-hint"><span class="arrow">▼</span> <span data-en="Click to expand"
+              data-fr="Cliquer pour agrandir">Click to expand</span></div>
         </div>
 
         <div class="timeline-item edu-item reveal-el">
           <div class="timeline-dot"></div>
           <div class="timeline-header">
-            <span class="timeline-badge badge-edu">Education</span>
-            <div class="timeline-date">Aug 2026 — Present</div>
+            <span class="timeline-badge badge-edu" data-en="Education" data-fr="Formation">Education</span>
+            <div class="timeline-date" data-en="Aug 2026 — Present" data-fr="Août 2026 — Présent">Aug 2026 — Present
+            </div>
           </div>
-          <h3>M.Sc. in Information Technology (Track - Embedded AI)</h3>
+          <h3 data-en="M.Sc. in Information Technology (Track - Embedded AI)"
+            data-fr="M.Sc. en Technologies de l'Information (Parcours - IA embarquée)">M.Sc. in Information
+            Technology (Track - Embedded AI)</h3>
           <div class="org"><span class="org-icon">🎓</span> IMT Atlantique · Brest, France</div>
-          <p>Graduate studies in embedded AI systems, signal processing, and advanced computing.</p>
+          <p data-en="Graduate studies in embedded AI systems, signal processing, and advanced computing."
+            data-fr="Études supérieures en systèmes d'IA embarquée, traitement du signal et informatique avancée.">
+            Graduate studies in embedded AI systems, signal processing, and advanced computing.</p>
           <div class="timeline-details">
-            <p>Focus on deploying intelligent models in resource-constrained hardware environments. Coursework covers
+            <p data-en="Focus on deploying intelligent models in resource-constrained hardware environments. Coursework covers embedded systems design, edge inference optimization, and real-time signal processing."
+              data-fr="Accent mis sur le déploiement de modèles intelligents dans des environnements matériels à ressources limitées. Programme couvrant la conception de systèmes embarqués, l'optimisation de l'inférence embarquée et le traitement du signal en temps réel.">
+              Focus on deploying intelligent models in resource-constrained hardware environments. Coursework covers
               embedded systems design, edge inference optimization, and real-time signal processing.</p>
           </div>
           <div class="timeline-tech">
-            <span class="tech-pill">Embedded AI</span><span class="tech-pill">Signal Processing</span><span
-              class="tech-pill">Edge Computing</span>
+            <span class="tech-pill" data-en="Embedded AI" data-fr="IA embarquée">Embedded AI</span><span
+              class="tech-pill" data-en="Signal Processing" data-fr="Traitement du signal">Signal Processing</span><span
+              class="tech-pill" data-en="Edge Computing" data-fr="Informatique embarquée">Edge Computing</span>
           </div>
-          <div class="timeline-expand-hint"><span class="arrow">▼</span> Click to expand</div>
+          <div class="timeline-expand-hint"><span class="arrow">▼</span> <span data-en="Click to expand"
+              data-fr="Cliquer pour agrandir">Click to expand</span></div>
         </div>
 
         <div class="timeline-item edu-item reveal-el">
           <div class="timeline-dot"></div>
           <div class="timeline-header">
-            <span class="timeline-badge badge-edu">Education</span>
+            <span class="timeline-badge badge-edu" data-en="Education" data-fr="Formation">Education</span>
             <div class="timeline-date">Aug 2022 — 2026</div>
           </div>
-          <h3>B.Tech in Computer Science (AI & ML)</h3>
+          <h3 data-en="B.Tech in Computer Science (AI & ML)" data-fr="B.Tech en Informatique (IA & ML)">B.Tech in
+            Computer Science (AI & ML)</h3>
           <div class="org"><span class="org-icon">🎓</span> Sri Ramachandra Institute of Higher Education and Research ·
             Chennai</div>
-          <p>Specializing in Computer Vision, Deep Learning, and Edge AI.</p>
+          <p data-en="Specializing in Computer Vision, Deep Learning, and Edge AI."
+            data-fr="Spécialisation en vision par ordinateur, apprentissage profond et IA embarquée.">Specializing in
+            Computer Vision, Deep Learning, and Edge AI.</p>
           <div class="timeline-details">
-            <p>Coursework spanning neural architectures, reinforcement learning, NLP, and embedded systems. Active in
+            <p data-en="Coursework spanning neural architectures, reinforcement learning, NLP, and embedded systems. Active in research projects, hackathons, and open-source contributions."
+              data-fr="Programme couvrant les architectures neuronales, l'apprentissage par renforcement, le TAL et les systèmes embarqués. Participation active à des projets de recherche, des hackathons et des contributions open source.">
+              Coursework spanning neural architectures, reinforcement learning, NLP, and embedded systems. Active in
               research projects, hackathons, and open-source contributions.</p>
           </div>
           <div class="timeline-tech">
-            <span class="tech-pill">Deep Learning</span><span class="tech-pill">Computer Vision</span><span
-              class="tech-pill">Edge AI</span><span class="tech-pill">NLP</span>
+            <span class="tech-pill" data-en="Deep Learning" data-fr="Apprentissage profond">Deep Learning</span><span
+              class="tech-pill" data-en="Computer Vision" data-fr="Vision par ordinateur">Computer Vision</span><span
+              class="tech-pill" data-en="Edge AI" data-fr="IA embarquée">Edge AI</span><span class="tech-pill"
+              data-en="NLP" data-fr="TAL">NLP</span>
           </div>
-          <div class="timeline-expand-hint"><span class="arrow">▼</span> Click to expand</div>
+          <div class="timeline-expand-hint"><span class="arrow">▼</span> <span data-en="Click to expand"
+              data-fr="Cliquer pour agrandir">Click to expand</span></div>
         </div>
 
       </div>
@@ -543,33 +687,36 @@
   <!-- Contact -->
   <section class="section" id="contact">
     <div class="container">
-      <h2 class="section-title reveal-el">Get in Touch</h2>
-      <p class="section-subtitle reveal-el">Open to collaborations, research opportunities, and grad school discussions.
+      <h2 class="section-title reveal-el" data-en="Get in Touch" data-fr="Me contacter">Get in Touch</h2>
+      <p class="section-subtitle reveal-el"
+        data-en="Open to collaborations, research opportunities, and grad school discussions."
+        data-fr="Ouvert aux collaborations, aux opportunités de recherche et aux échanges sur les études supérieures.">
+        Open to collaborations, research opportunities, and grad school discussions.
       </p>
       <div class="contact-grid stagger-children">
         <a href="mailto:aakashkarthi2004@gmail.com" class="contact-card glass reveal-el">
           <span class="contact-icon">📧</span>
-          <span class="label">Email</span>
+          <span class="label" data-en="Email" data-fr="E-mail">Email</span>
           <span class="value">aakashkarthi2004@gmail.com</span>
         </a>
         <a href="https://github.com/DarkAakrin17" target="_blank" class="contact-card glass reveal-el">
           <span class="contact-icon">💻</span>
-          <span class="label">GitHub</span>
+          <span class="label" data-en="GitHub" data-fr="GitHub">GitHub</span>
           <span class="value">DarkAakrin17</span>
         </a>
         <a href="tel:+919361959211" class="contact-card glass reveal-el">
           <span class="contact-icon">📞</span>
-          <span class="label">Phone</span>
+          <span class="label" data-en="Phone" data-fr="Téléphone">Phone</span>
           <span class="value">+91 9361959211</span>
         </a>
         <a href="https://linkedin.com/in/aakash-j-487967270" target="_blank" class="contact-card glass reveal-el">
           <span class="contact-icon">🔗</span>
-          <span class="label">LinkedIn</span>
+          <span class="label" data-en="LinkedIn" data-fr="LinkedIn">LinkedIn</span>
           <span class="value">Aakash Jayapaul</span>
         </a>
         <a href="#" class="contact-card glass reveal-el">
           <span class="contact-icon">📍</span>
-          <span class="label">Location</span>
+          <span class="label" data-en="Location" data-fr="Localisation">Location</span>
           <span class="value">Brest, France</span>
         </a>
       </div>
@@ -579,7 +726,9 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>© 2026 Aakash Jayapaul — Edge AI & ML Engineer</p>
+      <p data-en="© 2026 Aakash Jayapaul — Edge AI & ML Engineer"
+        data-fr="© 2026 Aakash Jayapaul — Ingénieur IA embarquée & ML">© 2026 Aakash Jayapaul — Edge AI & ML Engineer
+      </p>
     </div>
   </footer>
 
