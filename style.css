@@ -241,6 +241,21 @@ body.light .navbar {
   box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
 }
 
+/* Language toggle button */
+.lang-toggle {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  border-radius: 8px;
+}
+
+.lang-toggle:hover {
+  border-color: var(--accent-emerald);
+  color: var(--accent-emerald);
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.15);
+}
+
 /* Hamburger */
 .hamburger {
   display: none;
