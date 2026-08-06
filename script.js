@@ -2,28 +2,52 @@
    Edge AI Portfolio — Interactions & Animations
    ============================================ */
 
+// ——— Language State ———
+let currentLang = 'en';
+
 // ——— Dynamic Greeting based on time ———
 const greetingEl = document.getElementById('greeting');
-const hour = new Date().getHours();
-if (hour < 12) greetingEl.textContent = 'Good morning';
-else if (hour < 17) greetingEl.textContent = 'Good afternoon';
-else greetingEl.textContent = 'Good evening';
+
+function updateGreeting() {
+  const hour = new Date().getHours();
+  if (currentLang === 'fr') {
+    if (hour < 12) greetingEl.textContent = 'Bonjour';
+    else if (hour < 18) greetingEl.textContent = 'Bon après-midi';
+    else greetingEl.textContent = 'Bonsoir';
+  } else {
+    if (hour < 12) greetingEl.textContent = 'Good morning';
+    else if (hour < 17) greetingEl.textContent = 'Good afternoon';
+    else greetingEl.textContent = 'Good evening';
+  }
+}
+updateGreeting();
 
 // ——— Typing Effect ———
-const roles = [
-  'Edge AI Engineer',
-  'Embedded AI Developer',
-  'Computer Vision Specialist',
-  'TensorRT Optimization',
-  'Deep Learning Researcher',
-  'Real-Time Inference Developer'
-];
+const rolesByLang = {
+  en: [
+    'Edge AI Engineer',
+    'Embedded AI Developer',
+    'Computer Vision Specialist',
+    'TensorRT Optimization',
+    'Deep Learning Researcher',
+    'Real-Time Inference Developer'
+  ],
+  fr: [
+    'Ingénieur IA embarquée',
+    'Développeur IA embarquée',
+    'Spécialiste vision par ordinateur',
+    'Optimisation TensorRT',
+    'Chercheur en apprentissage profond',
+    'Développeur inférence temps réel'
+  ]
+};
 
 const typedEl = document.getElementById('typed-role');
+let roles = rolesByLang.en;
 let roleIdx = 0, charIdx = 0, isDeleting = false;
 
 function typeLoop() {
-  const current = roles[roleIdx];
+  const current = roles[roleIdx % roles.length];
   if (!isDeleting) {
     typedEl.textContent = current.slice(0, ++charIdx);
     if (charIdx === current.length) {
@@ -143,18 +167,16 @@ class TextScrambler {
   constructor(el) {
     this.el = el;
     this.chars = '!<>-_\\/[]{}—=+*^?#_AIML';
-    this.originalText = el.textContent;
-    this.scrambled = false;
   }
 
   scramble() {
-    if (this.scrambled) return;
-    this.scrambled = true;
-    const text = this.originalText;
+    const text = this.el.textContent;
     let iteration = 0;
     const maxIterations = text.length;
 
-    const interval = setInterval(() => {
+    if (this._interval) clearInterval(this._interval);
+
+    this._interval = setInterval(() => {
       this.el.textContent = text.split('').map((char, i) => {
         if (i < iteration) return text[i];
         return this.chars[Math.floor(Math.random() * this.chars.length)];
@@ -163,7 +185,7 @@ class TextScrambler {
       iteration += 1 / 2;
       if (iteration >= maxIterations) {
         this.el.textContent = text;
-        clearInterval(interval);
+        clearInterval(this._interval);
       }
     }, 30);
   }
@@ -334,8 +356,13 @@ const closeModal = document.querySelector('.close-modal');
 
 projectCards.forEach(card => {
   card.addEventListener('click', () => {
-    modalTitle.textContent = card.dataset.title;
-    modalDesc.textContent = card.dataset.desc;
+    if (currentLang === 'fr' && card.dataset.titleFr) {
+      modalTitle.textContent = card.dataset.titleFr;
+      modalDesc.textContent = card.dataset.descFr;
+    } else {
+      modalTitle.textContent = card.dataset.title;
+      modalDesc.textContent = card.dataset.desc;
+    }
     modal.classList.add('show');
   });
 });
@@ -353,25 +380,48 @@ document.addEventListener('keydown', (e) => {
 const terminalInput = document.getElementById('terminalInput');
 const terminalOutput = document.getElementById('terminalOutput');
 
-const terminalCommands = {
-  help: () => "Available commands: skills, projects, contact, location, focus, status, whoami, frameworks, hello, clear",
-  skills: () => "['Computer_Vision', 'Deep_Learning', 'Edge_AI', 'RL', 'NLP', 'Software_Dev']",
-  projects: () => `Total: ${projectCards.length} projects across Edge AI, CV, Healthcare, NLP, and Software`,
-  contact: () => "📧 aakashkarthi2004@gmail.com  |  💻 github.com/DarkAakrin17",
-  location: () => "'Brest, France 🇫🇷'",
-  focus: () => "['Edge_AI', 'Computer_Vision', 'Deep_Learning', 'Robotics']",
-  status: () => "'Building AI at the edge 🚀'",
-  whoami: () => "'Aakash Jayapaul — Edge AI & ML Engineer'",
-  frameworks: () => "['PyTorch', 'TensorFlow', 'TFLite', 'TF.js', 'ONNX', 'OpenCV']",
-  hello: () => {
-    const h = new Date().getHours();
-    if (h < 12) return "'Good morning! ☀️ Welcome to my portfolio.'";
-    if (h < 17) return "'Good afternoon! 🌤️ Thanks for visiting.'";
-    return "'Good evening! 🌙 Glad you stopped by.'";
+const terminalCommandsByLang = {
+  en: {
+    help: () => "Available commands: skills, projects, contact, location, focus, status, whoami, frameworks, hello, clear",
+    skills: () => "['Computer_Vision', 'Deep_Learning', 'Edge_AI', 'RL', 'NLP', 'Software_Dev']",
+    projects: () => `Total: ${projectCards.length} projects across Edge AI, CV, Healthcare, NLP, and Software`,
+    contact: () => "📧 aakashkarthi2004@gmail.com  |  💻 github.com/DarkAakrin17",
+    location: () => "'Brest, France 🇫🇷'",
+    focus: () => "['Edge_AI', 'Computer_Vision', 'Deep_Learning', 'Robotics']",
+    status: () => "'Building AI at the edge 🚀'",
+    whoami: () => "'Aakash Jayapaul — Edge AI & ML Engineer'",
+    frameworks: () => "['PyTorch', 'TensorFlow', 'TFLite', 'TF.js', 'ONNX', 'OpenCV']",
+    hello: () => {
+      const h = new Date().getHours();
+      if (h < 12) return "'Good morning! ☀️ Welcome to my portfolio.'";
+      if (h < 17) return "'Good afternoon! 🌤️ Thanks for visiting.'";
+      return "'Good evening! 🌙 Glad you stopped by.'";
+    },
+    clear: () => {
+      terminalOutput.innerHTML = '';
+      return null;
+    }
   },
-  clear: () => {
-    terminalOutput.innerHTML = '';
-    return null;
+  fr: {
+    help: () => "Commandes disponibles : skills, projects, contact, location, focus, status, whoami, frameworks, hello, clear",
+    skills: () => "['Vision_Ordinateur', 'Apprentissage_Profond', 'IA_Embarquee', 'RL', 'TAL', 'Dev_Logiciel']",
+    projects: () => `Total : ${projectCards.length} projets en IA embarquée, vision, santé, TAL et logiciel`,
+    contact: () => "📧 aakashkarthi2004@gmail.com  |  💻 github.com/DarkAakrin17",
+    location: () => "'Brest, France 🇫🇷'",
+    focus: () => "['IA_Embarquee', 'Vision_Ordinateur', 'Apprentissage_Profond', 'Robotique']",
+    status: () => "'Construire l'IA à la périphérie 🚀'",
+    whoami: () => "'Aakash Jayapaul — Ingénieur IA embarquée & ML'",
+    frameworks: () => "['PyTorch', 'TensorFlow', 'TFLite', 'TF.js', 'ONNX', 'OpenCV']",
+    hello: () => {
+      const h = new Date().getHours();
+      if (h < 12) return "'Bonjour ! ☀️ Bienvenue sur mon portfolio.'";
+      if (h < 18) return "'Bon après-midi ! 🌤️ Merci de votre visite.'";
+      return "'Bonsoir ! 🌙 Ravi de vous voir ici.'";
+    },
+    clear: () => {
+      terminalOutput.innerHTML = '';
+      return null;
+    }
   }
 };
 
@@ -389,12 +439,15 @@ terminalInput.addEventListener('keydown', (e) => {
     terminalOutput.appendChild(cmdLine);
 
     // Process
-    const handler = terminalCommands[cmd];
+    const commands = terminalCommandsByLang[currentLang] || terminalCommandsByLang.en;
+    const handler = commands[cmd];
     let result;
     if (handler) {
       result = handler();
     } else {
-      result = `NameError: command '${cmd}' not found. Try 'help'`;
+      result = currentLang === 'fr'
+        ? `NameError : commande '${cmd}' introuvable. Essayez 'help'`
+        : `NameError: command '${cmd}' not found. Try 'help'`;
     }
 
     if (result !== null && result !== undefined) {
@@ -530,4 +583,37 @@ document.querySelectorAll('.timeline-item').forEach(item => {
     // Toggle clicked
     if (!wasExpanded) item.classList.add('expanded');
   });
+});
+
+// ——— Language Toggle (EN / FR) ———
+const langToggle = document.getElementById('langToggle');
+const translatableEls = document.querySelectorAll('[data-en][data-fr]');
+
+function applyLanguage(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang;
+
+  translatableEls.forEach(el => {
+    const value = el.dataset[lang === 'fr' ? 'fr' : 'en'];
+    if (value === undefined) return;
+    // Elements that intentionally carry inline markup (e.g. <strong>) use innerHTML;
+    // everything else is set the same way for consistency.
+    el.innerHTML = value;
+  });
+
+  // Placeholder needs special handling (not covered by innerHTML)
+  if (terminalInput) {
+    terminalInput.placeholder = terminalInput.dataset[lang === 'fr' ? 'fr' : 'en'];
+  }
+
+  updateGreeting();
+  roles = rolesByLang[lang] || rolesByLang.en;
+  roleIdx = 0;
+
+  langToggle.textContent = lang === 'fr' ? 'EN' : 'FR';
+  langToggle.dataset.lang = lang;
+}
+
+langToggle.addEventListener('click', () => {
+  applyLanguage(currentLang === 'fr' ? 'en' : 'fr');
 });
